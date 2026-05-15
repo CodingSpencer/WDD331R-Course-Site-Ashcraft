@@ -8,6 +8,7 @@
 
 /* COMPONENTS */
 @import "components/nav.css" layer(components);
+@import "components/header.css" layer(components);
 
 /* TOKENS */
 @import "tokens/colors.css" layer(tokens);
