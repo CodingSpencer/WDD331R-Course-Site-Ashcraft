@@ -1,0 +1,67 @@
+/* NAV CONTAINER */
+.links-space {
+    background-color: var(--surface-color);
+    padding: var(--space-lg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    width: clamp(250px, 60%, 500px);
+    margin: var(--space-xl) auto;
+    font-family: var(--font-sans);
+    line-height: var(--line-height);
+}
+
+@scope (.unit-links-nav) {
+    :scope {
+        background-color: var(--surface-color);
+        padding: var(--space-lg);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        width: clamp(200px, 800%, 400px);
+        margin: var(--space-xl) auto;
+        font-family: var(--font-sans);
+        line-height: var(--line-height);
+    }
+
+    & h2 {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-md);
+        text-align: center;
+    }
+
+    & a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: var(--font-size-md);
+        /* If you want the links centered inside the box: */
+        display: block;
+        text-align: center;
+    }
+    /* Unvisited links */
+    & a:link {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: var(--font-size-md);
+        /* If you want the links centered inside the box: */
+        display: block;
+        text-align: center;
+    }
+
+    /* Visited links */
+    & a:visited {
+        color: var(--text-muted); 
+    }
+
+    /* Hover */
+    & a:hover {
+        color: var(--link-hover-color);
+        text-decoration: underline;
+    }
+
+    /* Active click */
+    & a:active {
+        color: var(--accent-color);
+    }
+}

@@ -1,0 +1,96 @@
+/* Base element styles: body, headings, links, lists.
+   No classes here, only bare HTML element selectors.
+   Reference tokens with var(). */
+
+/* TODO: Style body, headings, links, and other base elements */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+
+   &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul, ol {
+    margin-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border: none;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken(var(--color-primary), 10%);
+    }
+}
+
+span {
+    color: var(--color-text);
+}
+
+input,
+textarea,
+select {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-sm);
+    background-color: var(--color-surface);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-primary);
+    margin: var(--spacing-lg) 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+}

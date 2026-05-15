@@ -1,0 +1,25 @@
+/* Utility classes: single-purpose helpers.
+   These live in the last layer so they override components
+   by layer order without needing !important. */
+
+/* TODO: Add any utility classes you find useful */
+.main > * + * {
+   margin-top: clamp(var(--spacing-sm), 2vw, var(--spacing-md));
+}
+
+.temple-status {
+   display: inline-flex;
+   align-items: center;
+   padding: var(--spacing-sm) var(--spacing-md);
+   border-radius: var(--border-radius-sm);
+   font-size: var(--font-size-sm);
+   font-weight: 600;
+}
+
+.temples li {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: var(--spacing-sm) 0;
+   gap: var(--spacing-md);
+}

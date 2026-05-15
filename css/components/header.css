@@ -1,0 +1,13 @@
+.home-header {
+    background-color: var(--surface-color);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    max-width: 600px;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    margin-left: var(--indent-lg); /* Or use your variable: var(--indent-lg) */
+    margin-right: auto;
+    border: 1px solid var(--border-color);
+    font-family: var(--font-sans);
+    line-height: var(--line-height);
+}

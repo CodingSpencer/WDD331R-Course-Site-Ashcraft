@@ -1,0 +1,56 @@
+/* ========================================
+   BASE STYLES
+   ======================================== */
+body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height);
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    padding: clamp(var(--space-sm), 2vw, var(--space-xl));
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+nav {
+    padding: var(--space-md) var(--space-lg);
+    margin-bottom: var(--space-lg);
+
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--title-color);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-sm);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: var(--space-sm);
+}
+
+a {
+    color: var(--link-color);
+
+    &:hover {
+        color: var(--link-hover-color);
+    }
+}
+
