@@ -1,7 +1,7 @@
 ## GitHub
 
-- [Live GitHub Page](https://codingspencer.github.io/wdd331-practice/)
-- [Source Repository](https://github.com/CodingSpencer/wdd331-practice.git)
+- [Live GitHub Page](https://codingspencer.github.io/WDD331R-Course-Site-Ashcraft/)
+- [Source Repository](https://github.com/CodingSpencer/WDD331R-Course-Site-Ashcraft)
 
 ## Assignments
 
