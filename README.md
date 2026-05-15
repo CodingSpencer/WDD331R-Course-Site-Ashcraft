@@ -12,4 +12,4 @@
 
 ### Unit 2
 - [Layered Components](unit-2/layered-components/index.html)
-- [Lightning CSS Demo] (unit-2/lightning-css-demo/index.html)
+- [Lightning CSS Demo](unit-2/lightning-css-demo/index.html)
