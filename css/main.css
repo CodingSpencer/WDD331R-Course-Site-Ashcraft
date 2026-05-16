@@ -1,4 +1,8 @@
-@layer base, layout, components, utilities, vendor;
+@layer tokens, base, layout, components, utilities, vendor;
+
+/* TOKENS */
+@import "tokens/colors.css" layer(tokens);
+@import "tokens/variables.css" layer(tokens);
 
 /* BASE */
 @import "base/elements.css" layer(base);
@@ -9,10 +13,6 @@
 /* COMPONENTS */
 @import "components/nav.css" layer(components);
 @import "components/header.css" layer(components);
-
-/* TOKENS */
-@import "tokens/colors.css" layer(tokens);
-@import "tokens/variables.css" layer(tokens);
 
 /* UTILITIES */
 @import "utilities/utilities.css" layer(utilities);
