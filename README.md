@@ -3,6 +3,9 @@
 - [Live GitHub Page](https://codingspencer.github.io/WDD331R-Course-Site-Ashcraft/)
 - [Source Repository](https://github.com/CodingSpencer/WDD331R-Course-Site-Ashcraft)
 
+## Theme Switch
+Each page now has theme switch enabled.
+
 ## Assignments
 
 - [Home](index.html)
