@@ -1,18 +1,18 @@
 :root {
     /* COLORS: light-dark(light_value, dark_value) */
-    --title-color: light-dark(#1f7a4c, #4ade80);
+    --title-color: light-dark(#1f7a4c, oklch(0.81 0.17 142.5));
 
-    --bg-color: light-dark(#ffffff, #121212);
-    --surface-color: light-dark(#f5f5f5, #1e1e1e);
+    --bg-color: light-dark(#ffffff, oklch(0.18 0.005 140));
+    --surface-color: light-dark(#f5f5f5, oklch(0.24 0.005 140));
 
-    --text-color: light-dark(#111111, #eeeeee);
-    --text-muted: light-dark(#555555, #aaaaaa);
+    --text-color: light-dark(#111111, oklch(0.95 0 0));
+    --text-muted: light-dark(#555555, oklch(0.74 0 0));
 
-    --primary-color: light-dark(#1f7a4c, #22c55e);
-    --accent-color: light-dark(#22c55e, #4ade80);
+    --primary-color: light-dark(#1f7a4c, oklch(0.74 0.19 141.5));
+    --accent-color: light-dark(#22c55e, oklch(0.81 0.17 142.5));
 
-    --link-color: light-dark(#1a73e8, #60a5fa);
-    --link-hover-color: light-dark(#1558b0, #93c5fd);
+    --link-color: light-dark(#1a73e8, oklch(0.71 0.13 243.7));
+    --link-hover-color: light-dark(#1558b0, oklch(0.81 0.09 239.5));
 
-    --border-color: light-dark(#e5e5e5, #333333);
+    --border-color: light-dark(#e5e5e5, oklch(0.32 0.005 140));
 }
