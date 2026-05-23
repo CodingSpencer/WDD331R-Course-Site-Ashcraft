@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "lightningcss --bundle --minify --targets \">= 0.25%\" css/main.css -o dist/styles.css",
-    "watch": "chokidar \"css/**/*.css\" -c \"npm run build\" --debounce 600",
-    "refresh": "npx lightningcss-cli --bundle --minify --targets \">= 0.25%\" css/main.css -o dist/styles.css"
+    "build": "lightningcss --bundle --minify --targets \">= 0.25%\" src/css/main.css -o dist/styles.css",
+    "watch": "chokidar \"src/css/**/*.css\" -c \"npm run build\" --debounce 600",
+    "refresh": "npx lightningcss-cli --bundle --minify --targets \">= 0.25%\" src/css/main.css -o dist/styles.css"
   },
   "repository": {
     "type": "git",
