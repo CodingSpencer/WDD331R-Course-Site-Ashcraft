@@ -4,11 +4,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ward Activity Board</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="/src/js/theme-preference.js"></script>
+    <link rel="stylesheet" href="/dist/styles.css">
 </head>
 <body>
     <nav class="site-nav">
         <a href="../../index.html">&larr; Home</a>
+
+        <details class="theme-switcher">
+            <summary class="theme-control">
+                <span class="visually-hidden">Theme scheme</span>
+            </summary>
+            <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="light">
+                    <span aria-hidden="true">☀️</span>
+                    <span>Light</span>
+                </label>
+                
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="system" checked>
+                    <span aria-hidden="true">⚙️</span>
+                    <span>System</span>
+                </label>
+                
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="dark">
+                    <span aria-hidden="true">🌖</span>
+                    <span>Dark</span>
+                </label>
+            </div>
+        </details>
     </nav>
 
     <header class="board-header">

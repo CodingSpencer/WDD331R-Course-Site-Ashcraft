@@ -3,6 +3,9 @@
 - [Live GitHub Page](https://codingspencer.github.io/wdd331-practice/)
 - [Source Repository](https://github.com/CodingSpencer/wdd331-practice.git)
 
+## Theme Switch
+Each page now has theme switch enabled.
+
 ## Assignments
 
 - [Home](index.html)
