@@ -1,35 +1,55 @@
 :root {
-    /* SPACING (normalized scale) */
+    /* --- DESIGN SYSTEM CORE SCALES --- */
+
+    /* SPACING (Normalized Multiplier Engine) */
     --space-unit: 8px;
+    --space-xs: calc(var(--space-unit) * 0.5);   /* 4px */
+    --space-sm: var(--space-unit);                 /* 8px */
+    --space-md: calc(var(--space-unit) * 2);       /* 16px */
+    --space-lg: calc(var(--space-unit) * 3);       /* 24px */
+    --space-xl: calc(var(--space-unit) * 4);       /* 32px */
 
-    --space-xs: calc(var(--space-unit) * 0.5);
-    --space-sm: var(--space-unit);
-    --space-md: calc(var(--space-unit) * 2);
-    --space-lg: calc(var(--space-unit) * 3);
-    --space-xl: calc(var(--space-unit) * 4);
+    /* RADII (Linked directly to spacing proportions) */
+    --radius-sm: calc(var(--space-unit) * 0.5);   /* 4px */
+    --radius-md: var(--space-unit);                 /* 8px */
+    --radius-lg: calc(var(--space-unit) * 1.5);     /* 12px */
 
-    /* TYPOGRAPHY */
+    /* INDENTATION ALIGNMENTS */
+    --indent-sm: var(--space-sm);
+    --indent-md: var(--space-md);
+    --indent-lg: var(--space-lg);
+
+    /* --- TYPOGRAPHY ENGINE --- */
+
+    /* Font Families */
     --font-sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    --font-mono: monospace;
 
-    --font-size-sm: 0.875rem;
-    --font-size-md: 1rem;
-    --font-size-lg: 1.25rem;
+    /* Font Sizes (Normalized rem-scale based on 16px base browser standard) */
+    --font-size-sm: 0.875rem; /* ~14px */
+    --font-size-md: 1rem;     /* ~16px */
+    --font-size-lg: 1.25rem;  /* ~20px */
 
+    /* Font Weights */
     --font-light: 300;
     --font-regular: 400;
     --font-medium: 500;
     --font-semibold: 600;
     --font-bold: 700;
     
+    /* Text Metrics */
     --line-height: 1.5;
 
-    /* RADIUS */
-    --radius-sm: calc(var(--space-unit) * 0.5);
-    --radius-md: var(--space-unit);
-    --radius-lg: calc(var(--space-unit) * 1.5);
 
-    /* INDENTATION */
-    --indent-sm: var(--space-sm);
-    --indent-md: var(--space-md);
-    --indent-lg: var(--space-lg);
+    /* --- GLOBAL INTERACTION LAYOUT TOKENS --- */
+
+    /* Transitions & Motion */
+    --transition-base: 0.2s ease;
+
+    /* Interactive Element Indicators */
+    --outline-width: 2px;
+
+    /* Component Architecture Dimensions */
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
 }
