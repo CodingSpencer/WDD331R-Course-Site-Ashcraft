@@ -1,10 +1,11 @@
-/* NAV CONTAINER */
+/* ========================================
+HOMEPAGE DASHBOARD MODULE
+======================================= */
 .links-space {
     background-color: var(--surface-color);
     padding: var(--space-lg);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-
     width: clamp(250px, 60%, 500px);
     margin: var(--space-xl) auto;
     font-family: var(--font-sans);
@@ -17,7 +18,7 @@
         padding: var(--space-lg);
         border: 1px solid var(--border-color);
         border-radius: var(--radius-md);
-        width: clamp(200px, 800%, 400px);
+        width: clamp(200px, 80%, 400px); /* Fixed from 800% to 80% */
         margin: var(--space-xl) auto;
         font-family: var(--font-sans);
         line-height: var(--line-height);
@@ -29,22 +30,12 @@
         text-align: center;
     }
 
+    /* Target baseline links directly */
     & a {
         color: var(--link-color);
         text-decoration: none;
         font-weight: 600;
         font-size: var(--font-size-md);
-        /* If you want the links centered inside the box: */
-        display: block;
-        text-align: center;
-    }
-    /* Unvisited links */
-    & a:link {
-        color: var(--link-color);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: var(--font-size-md);
-        /* If you want the links centered inside the box: */
         display: block;
         text-align: center;
     }
@@ -63,5 +54,78 @@
     /* Active click */
     & a:active {
         color: var(--accent-color);
+    }
+}
+
+/* ========================================
+GLOBAL NAVIGATION BAR (.site-nav)
+======================================= */
+@scope (.site-nav) {
+    :scope {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Pushes home to the left, menus to the right */
+        flex-wrap: nowrap; /* CRITICAL: Forces everything to stay on exactly ONE line */
+        
+        background-color: var(--surface-color);
+        padding: var(--space-sm) var(--space-lg);
+        border-bottom: 1px solid var(--border-color);
+        font-family: var(--font-sans);
+        line-height: var(--line-height);
+    }
+
+    /* Target the single back/home link */
+    & > a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: var(--font-medium);
+        font-size: var(--font-size-sm);
+        white-space: nowrap; /* Prevents arrow from breaking away from the word */
+        transition: color var(--transition-base);
+
+        &:hover {
+            color: var(--link-hover-color);
+        }
+    }
+
+    /* Unordered List Wrapper (The horizontal list controller) */
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        list-style: none; /* Removes the bullet points */
+        margin: 0;        /* CRITICAL: Strips browser spacing blocks */
+        padding: 0;       /* CRITICAL: Strips browser spacing blocks */
+    }
+
+    /* Individual List Items */
+    & li {
+        display: inline-block; /* Keeps list items resting beside each other */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Nav Links Styling */
+    & ul a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-size-sm);
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: var(--radius-sm);
+        white-space: nowrap; /* Forces each link name to stay unified */
+        transition: background-color var(--transition-base), color var(--transition-base);
+
+        &:hover {
+            color: var(--link-hover-color);
+            background-color: var(--border-color);
+        }
+
+        &[aria-current="page"] {
+            color: var(--text-color);
+            background-color: var(--border-color);
+            pointer-events: none;
+            box-shadow: inset 0 -2px 0 currentColor;
+        }
     }
 }

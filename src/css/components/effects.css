@@ -1,0 +1,26 @@
+.clip-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.shield-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.shield-image {
+    width: 250px; /* Adjust size as needed */
+    height: 250px;
+    object-fit: cover; /* Ensures the image doesn't distort if it's not square */
+    
+    /* The magic line: crops the image to a circle from the center */
+    clip-path: circle(42% at center); 
+    
+    transition: clip-path 0.3s ease;
+}
+
+/* Optional fun hover effect: expanding the circle on hover */
+.shield-image:hover {
+    clip-path: circle(37% at center);
+}

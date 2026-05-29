@@ -1,6 +1,6 @@
 /* ========================================
-   CARD GROUP & GRID CONTROLLERS
-   ======================================= */
+CARD GROUP & GRID CONTROLLERS
+======================================= */
 .card-group {
     margin-bottom: var(--space-lg);
 
@@ -20,26 +20,44 @@
 }
 
 /* ========================================
-   INDIVIDUAL CARD ELEMENT
-   ======================================= */
+INDIVIDUAL CARD ELEMENT
+======================================= */
 .card {
     background-color: var(--surface-color);
     padding: var(--space-md);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
 
-    /* Clean translucent shadow adjustments for crisp dark mode support */
-    box-shadow: 0 2px 6px light-dark(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.3));
+    /* Dynamic small shadow from variables */
+    box-shadow: var(--shadow-sm);
 
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    
+    /* Using your system's custom animation speed token */
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-4px); 
         border-color: var(--primary-color);
-        box-shadow: 0 6px 14px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+        
+        /* Dynamic medium elevation shadow from variables on hover */
+        box-shadow: var(--shadow-md);
+
+        .card-image {
+            filter: grayscale(0%) brightness(100%);
+        }
+    }
+
+    .card-image {
+        width: 100%;
+        height: 180px; 
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        
+        filter: grayscale(80%) brightness(90%);
+        transition: filter var(--transition-base);
     }
 
     .card-tag {
@@ -47,7 +65,7 @@
         font-weight: var(--font-medium);
         padding: var(--space-xs) var(--space-sm);
         background-color: var(--accent-color);
-        color: light-dark(#ffffff, #121212); /* Dynamic contrast check */
+        color: light-dark(#ffffff, #121212);
         border-radius: var(--radius-sm);
         width: fit-content;
     }

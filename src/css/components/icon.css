@@ -1,0 +1,61 @@
+/* ========================================
+ICON ROW CONTROLLER
+======================================= */
+.icon-section {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+
+    h2 {
+        color: var(--text-color);
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-xs);
+    }
+
+    p {
+        color: var(--text-muted);
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--space-lg);
+        line-height: var(--line-height);
+    }
+}
+
+.icon-row {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    padding: var(--space-md);
+    background-color: var(--surface-color);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    width: fit-content;
+    
+    /* Sets the baseline color context for the icons and their shadows */
+    color: light-dark(#4a5568, #cbd5e1);
+}
+
+/* Individual Icon Items */
+.icon-item {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+    
+    /*  Forces the SVG stroke color to inherit the parent text color context */
+    stroke: currentColor; 
+    
+    /*  STACKED DROP-SHADOWS 
+        Using currentColor ensures the shadow matches your theme instantly.
+        We stack two shadows: a tight sharp outline, and a slightly offset soft glow. */
+    filter: 
+        drop-shadow(0 1px 1px currentColor) 
+        drop-shadow(0 4px 8px currentColor);
+        
+    transition: transform var(--transition-base), filter var(--transition-base);
+
+    &:hover {
+        transform: scale(1.15) translateY(-2px);
+        
+        /*  Intensifies the stacked outline glow on hover */
+        filter: 
+            drop-shadow(0 2px 2px var(--link-color)) 
+            drop-shadow(0 6px 12px var(--link-color));
+    }
+}
