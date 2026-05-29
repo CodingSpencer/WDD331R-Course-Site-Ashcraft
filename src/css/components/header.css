@@ -59,20 +59,20 @@ HERO INTERACTIVE STAGE (Absolute Layering Stack)
 
     /* 2. ALPHA MASK GRADIENT ENGINE
        Solid black retains 100% visibility, fading smoothly to transparent on the right side. */
-    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    /* -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
     mask-image: linear-gradient(to right, black 80%, transparent 100%);
     
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     
     -webkit-mask-size: cover;
-    mask-size: cover;
+    mask-size: cover; */
 
     /* 3. MULTI-LINE PRODUCTION TRANSITION CHAIN */
-    transition: 
+    /* transition: 
         clip-path 0.1s linear, 
         -webkit-mask-image 0.1s linear, 
-        mask-image 0.1s linear;
+        mask-image 0.1s linear; */
 }
 
 /* 2. TOP LAYER: Text Content Wrapper */
