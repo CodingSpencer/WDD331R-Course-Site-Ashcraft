@@ -1,3 +1,6 @@
+/* ==========================================================================
+HEADER WORKSPACE DECK
+========================================================================== */
 .home-header {
     background-color: var(--surface-color);
     padding: var(--space-lg);
@@ -5,9 +8,115 @@
     max-width: 600px;
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
-    margin-left: var(--indent-lg); /* Or use your variable: var(--indent-lg) */
+    margin-left: var(--indent-lg);
     margin-right: auto;
     border: 1px solid var(--border-color);
     font-family: var(--font-sans);
     line-height: var(--line-height);
+}
+
+/* ==========================================================================
+HERO INTERACTIVE STAGE (Absolute Layering Stack)
+========================================================================== */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; 
+    width: 100%;
+    padding: var(--space-xl);
+    background-color: #1a202c; /* Fallback background deck canvas color */
+    overflow: hidden; 
+}
+
+/* 1. INTERACTIVE BASE RENDER LAYER 
+   This matches the layout of your '.render-node' components inside the JS script. */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    /* BLENDING LAYER ENGINE */
+    background-image: 
+        linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0.3) 0%, 
+            rgba(0, 0, 0, 0.7) 100%
+        ),
+        url('https://picsum.photos/seed/hero-effects/1200/500');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+
+    /* 1. INITIAL GEOMETRIC INSET */
+    clip-path: inset(20px 20px 20px 20px round 12px);
+
+    /* 2. ALPHA MASK GRADIENT ENGINE
+       Solid black retains 100% visibility, fading smoothly to transparent on the right side. */
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    /* 3. MULTI-LINE PRODUCTION TRANSITION CHAIN */
+    transition: 
+        clip-path 0.1s linear, 
+        -webkit-mask-image 0.1s linear, 
+        mask-image 0.1s linear;
+}
+
+/* 2. TOP LAYER: Text Content Wrapper */
+.hero-content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 2; /* Floats safely on top of the interactive rendering node */
+}
+
+/* The Hero Heading Layout Rules */
+.hero__title {
+    font-family: var(--font-sans);
+    font-size: calc(var(--font-size-lg) * 2);
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+    text-shadow: var(--text-shadow-hero);
+}
+
+/* ==========================================================================
+SYSTEM DESIGN THEMATIC MEDIA OVERRIDES
+========================================================================== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-shadow-hero: 
+            0 2px 4px rgba(0, 0, 0, 0.5),
+            0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Darkens the baseline background layer system metrics */
+    .hero-image {
+        background-image: 
+            linear-gradient(
+                to bottom, 
+                rgba(0, 0, 0, 0.5) 0%, 
+                rgba(0, 0, 0, 0.85) 100%
+            ),
+            url('https://picsum.photos/seed/hero-effects/1200/500');
+    }
+    
+    .hero__title {
+        color: #f1f1f1; 
+    }
 }

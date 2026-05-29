@@ -1,0 +1,77 @@
+/* ========================================
+GLASS PANEL COMPONENT
+======================================= */
+.glass-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+    padding: var(--space-xl);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border-radius: var(--radius-lg);
+    overflow: hidden; /* Keeps the background image contained */
+}
+
+/* The Background Image Controller */
+.glass-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    .glass-bg-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* The Frosted Glass Panel Wrapper */
+.glass-panel {
+    position: relative;
+    z-index: 2; /* Sits cleanly on top of the background image wrapper */
+    max-width: 600px;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-glass);
+    
+    /* Dynamic light-dark surface background assignment */
+    background-color: var(--surface-glass);
+    
+    /* THE FROSTED GLASS EFFECT */
+    /* backdrop-filter mutates the pixels sitting directly *behind* this bounding box */
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%); /* Safari support engine */
+    
+    box-shadow: var(--shadow-md);
+
+    h2 {
+        color: var(--text-color);
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-sm);
+    }
+
+    p {
+        color: var(--text-color);
+        font-size: var(--font-size-md);
+        line-height: var(--line-height);
+    }
+}
+
+/* ========================================
+ACCESSIBILITY & REDUCED MOTION FALLBACK
+======================================= */
+@media (prefers-reduced-motion: reduce) {
+    .glass-panel {
+        /* Disables the resource-heavy real-time blurring engine */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        
+        /* Replaces the transparency with a solid, opaque background card */
+        background-color: light-dark(#ffffff, #1e1e1e);
+    }
+}
