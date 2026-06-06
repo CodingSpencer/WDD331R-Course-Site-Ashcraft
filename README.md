@@ -16,3 +16,9 @@ Each page now has theme switch enabled.
 ### Unit 2
 - [Layered Components](unit-2/layered-components/index.html)
 - [Lightning CSS Demo](unit-2/lightning-css-demo/index.html)
+
+### Unit 3
+- [Visual Effects](unit-3/visual-effects/index.html)
+
+### Unit 4
+- [Editorial & Cards Layout](unit-4/grid-layouts/editorial.html)
