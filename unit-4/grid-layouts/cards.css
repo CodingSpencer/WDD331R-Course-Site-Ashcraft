@@ -1,0 +1,93 @@
+/* Style the main page layout */
+.articles-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: sans-serif;
+}
+
+/* Header */
+.articles-page header {
+    grid-area: header;
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.articles-page .header-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.articles-page header h1 {
+    margin: 0 0 4px 0;
+    font-size: 24px;
+}
+
+.articles-page header p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.articles-page .nav-links-row {
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.articles-page .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0076ff;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.articles-page .btn:hover {
+    background-color: #0055b3;
+}
+
+.articles-page .btn-home {
+    background-color: #333333;
+}
+
+.articles-page .btn-home:hover {
+    background-color: #1a1a1a;
+}
+
+/* Card Grid */
+.articles-page .card-grid {
+    display: grid;
+    /* This automatically wraps cards */
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 20px;
+}
+
+/* Card Styling */
+.articles-page .card-grid .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.articles-page .card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
