@@ -22,3 +22,5 @@ Each page now has theme switch enabled.
 
 ### Unit 4
 - [Editorial & Cards Layout](unit-4/grid-layouts/editorial.html)
+- [Container Query Component](unit-4/advanced/container-demo.html)
+- [Sticky Element Demo](unit-4/advanced/sticky-demo.html)

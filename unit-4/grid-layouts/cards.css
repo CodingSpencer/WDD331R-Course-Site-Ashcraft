@@ -75,6 +75,13 @@
     gap: 20px;
 }
 
+@supports (grid-template-rows: subgrid) {
+    .articles-page .card-grid .card {
+        /* This allows us to use subgrids */
+        grid-template-rows: subgrid;
+    }
+}
+
 /* Card Styling */
 .articles-page .card-grid .card {
     background-color: #ffffff;

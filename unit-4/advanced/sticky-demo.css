@@ -1,0 +1,39 @@
+.page-wrapper {
+    /* overflow: hidden; */
+    /* Tested that it broke the sticky element */
+}
+
+.page-clip {
+    overflow: hidden;
+    /* This allows the overflow hidden to be applied but moves it to another layer so the sticky layout chains is unaffected  which allows the sticky element to work. */
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: clamp(200px, 25vw, 300px) 1fr;
+    grid-template-areas: "sidebar main";
+    gap: 2rem;
+    max-width: 100vw;
+}
+
+.sidebar {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    grid-area: sidebar;
+    padding: 1rem;
+}
+
+.toc {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin-bottom: 4rem;
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
