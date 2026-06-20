@@ -5,9 +5,9 @@
     --space-unit: 8px;
     --space-xs: calc(var(--space-unit) * 0.5);   /* 4px */
     --space-sm: var(--space-unit);                 /* 8px */
-    --space-md: calc(var(--space-unit) * 2);       /* 16px */
-    --space-lg: calc(var(--space-unit) * 3);       /* 24px */
-    --space-xl: calc(var(--space-unit) * 4);       /* 32px */
+    --space-md: clamp(1rem, 0.73rem + 1.36vw, 1.5rem);       /* 16-24px */
+    --space-lg: clamp(1.5rem, 1.05rem + 2.27vw, 2.33rem);       /* 24-37px */
+    --space-xl: clamp(2rem, 1.27rem + 3.64vw, 3.33rem);       /* 32-53px */
 
     /* RADII (Linked directly to spacing proportions) */
     --radius-sm: calc(var(--space-unit) * 0.5);   /* 4px */
@@ -22,13 +22,29 @@
     /* --- TYPOGRAPHY ENGINE --- */
 
     /* Font Families */
-    --font-sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-    --font-mono: monospace;
+    
+    /* Custom Fonts Definition */
+    --font-heading-custom: "Major Mono Display", monospace;
+    --font-body-custom: "Lora", Georgia, serif;
+
+    /* REFIXED: Both variables are explicitly mapped to distinct, verified roles */
+    --font-family-heading: var(--font-heading-custom);
+    --font-family-body: var(--font-body-custom);
 
     /* Font Sizes (Normalized rem-scale based on 16px base browser standard) */
     --font-size-sm: 0.875rem; /* ~14px */
     --font-size-md: 1rem;     /* ~16px */
-    --font-size-lg: 1.25rem;  /* ~20px */
+    --font-size-lg: clamp(1.25rem, 1.14rem + 0.57vw, 1.5rem);  /* ~20-24px */
+    --font-size-xl: clamp(1.5rem, 1.27rem + 0.57vw, 2rem);  /* ~32-40px */
+    --font-size-hero: clamp(2.25rem, 1.95rem + 2.73vw, 3.7rem);  /* ~40-60px */
+
+    /* Semantic Roles */
+    --font-size-body: var(--font-size-md);
+    --font-size-caption: var(--font-size-sm);
+    --font-size-heading-sm: var(--font-size-lg);
+    --font-size-heading-md: var(--font-size-xl);
+    --font-size-display-sm: var(--font-size-hero);
+
 
     /* Font Weights */
     --font-light: 300;
@@ -38,7 +54,9 @@
     --font-bold: 700;
     
     /* Text Metrics */
-    --line-height: 1.5;
+    --line-height-body: 1.6;
+    --line-height-heading: 1.25;
+    --line-height-display: 1.1;
 
 
     /* --- GLOBAL INTERACTION LAYOUT TOKENS --- */
