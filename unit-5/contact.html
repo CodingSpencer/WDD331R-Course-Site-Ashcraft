@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="/dist/styles.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="../../index.html">&larr; Home</a>
+
+        <details class="theme-switcher">
+            <summary class="theme-control">
+                <span class="visually-hidden">Theme scheme</span>
+            </summary>
+            <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="light">
+                    <span aria-hidden="true">☀️</span>
+                    <span>Light</span>
+                </label>
+                
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="system" checked>
+                    <span aria-hidden="true">⚙️</span>
+                    <span>System</span>
+                </label>
+                
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="dark">
+                    <span aria-hidden="true">🌖</span>
+                    <span>Dark</span>
+                </label>
+            </div>
+        </details>
+    </nav>
+    
+    <main class="contact-container">
+        <form class="contact-form" action="https://formspree.io/f/xayaoqej" method="POST">
+            <h2>Contact Us</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required>
+            <div class="form-group">
+                <input type="checkbox" id="phone-agree" name="phone-agree">
+                <label for="phone-agree">Check to include my phone number</label>
+            </div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <script>
+        const phoneCheckbox = document.getElementById('phone-agree');
+        const phoneFieldGroup = document.getElementById('phone-field-group');
+        const phoneInput = document.getElementById('phone');
+
+        phoneCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                phoneFieldGroup.style.display = 'block';
+                phoneInput.setAttribute('required', '');
+            } else {
+                phoneFieldGroup.style.display = 'none';
+                phoneInput.removeAttribute('required');
+                phoneInput.value = ''; // Clear input if unchecked
+            }
+        });
+    </script>
+</body>
+</html>

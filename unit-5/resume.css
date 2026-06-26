@@ -1,0 +1,63 @@
+@media print {
+    body {
+        font-family: "Times New Roman", Garamond, serif;
+        font-size: 11pt;
+        line-height: 1.4;
+        color: #000;
+        background: none;
+    }
+
+    .resume-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 24pt;
+        margin-bottom: 5pt;
+    }
+
+    h2 {
+        font-size: 14pt;
+        margin-top: 15pt;
+        margin-bottom: 5pt;
+        border-bottom: 1px solid #000;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    h3 {
+        font-size: 12pt;
+        margin-top: 8pt;
+        margin-bottom: 2pt;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .job-entry, .education-entry, #skills, #additional-qualifications {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a[href^="http"]::after,
+    a[href^="mailto"]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    @page {
+        size: letter;
+        margin: 0.75in;
+    }
+}

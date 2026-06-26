@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="./resume.css">
+    <link rel="stylesheet" href="/dist/styles.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="../../index.html">&larr; Home</a>
+
+        <details class="theme-switcher">
+            <summary class="theme-control">
+                <span class="visually-hidden">Theme scheme</span>
+            </summary>
+            <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="light">
+                    <span aria-hidden="true">☀️</span>
+                    <span>Light</span>
+                </label>
+                
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="system" checked>
+                    <span aria-hidden="true">⚙️</span>
+                    <span>System</span>
+                </label>
+                
+                <label class="theme-label">
+                    <input type="radio" name="theme-preference" value="dark">
+                    <span aria-hidden="true">🌖</span>
+                    <span>Dark</span>
+                </label>
+            </div>
+        </details>
+    </nav>
+    
+    <main class="resume-container">
+        <!-- Header / Contact Info -->
+        <header class="resume-header">
+            <h1>Spencer Ashcraft</h1>
+            <p class="contact-info">
+            <span>385-404-1235</span> | 
+            <a href="mailto:sashbyui@gmail.com">sashbyui@gmail.com</a> | 
+            <a href="https://www.linkedin.com/in/ashcraft-spencer" target="_blank" rel="noopener">linkedin.com/in/ashcraft-spencer</a>
+            </p>
+        </header>
+
+        <!-- Professional Summary -->
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>
+            Detail-oriented Software Engineering student with experience in Linux systems, Python, and C++. 
+            Skilled in command-line operations, system troubleshooting, and Agile team collaboration. 
+            Strong communicator with a background in supporting instructional environments and solving technical problems. 
+            Knowledgeable in cybersecurity fundamentals and eager to apply Linux and software engineering skills to real-world challenges.
+            </p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-entry">
+            <h3>Bachelor of Science in Software Engineering</h3>
+            <p class="institution">Brigham Young University - Idaho | Rexburg, ID</p>
+            <p class="date">January 2023 — Expected December 2026</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="job-entry">
+            <h3>Entity Creation Paralegal</h3>
+            <p class="job-meta">Legally Mine (Asset Protection) | Provo, UT | February 2025 — Present</p>
+            <ul>
+                <li>Managed a portfolio of 50+ clients while adapting workflows and updating tasks to align with evolving departmental requirements and standards.</li>
+                <li>Developed an automated system to ensure biweekly client outreach while accurately tracking account status and progress.</li>
+                <li>Took initiative to onboard and train new team members, improving team readiness and reducing learning curve time.</li>
+                <li>Identified inefficiencies in entity creation workflows (document creation, state filings, and follow-up procedures) and implemented process improvements to reduce rework and delays.</li>
+                <li>Collaborated across departments to resolve client issues and ensure compliance, often stepping in to address problems before escalation.</li>
+            </ul>
+            </div>
+
+            <div class="job-entry">
+            <h3>Teacher's Assistant — Intro to Robotics Course</h3>
+            <p class="job-meta">Brigham Young University-Idaho | Rexburg, ID | January 2024 — December 2024</p>
+            <ul>
+                <li>Led robotics lab instruction by mentoring students through complex programming and mechanical assembly projects, while driving problem-solving efforts to moderate technical issues.</li>
+                <li>Facilitated team collaboration and peer learning for 10–16 teams during 3-hour labs, promoting effective communication and teamwork among students.</li>
+                <li>Diagnosed and resolved technical issues, achieving a 100% resolution rate during lab sessions.</li>
+                <li>Facilitated structured team collaboration by assigning roles (programming, hardware, testing) and encouraging peer debugging and knowledge sharing.</li>
+                <li>Enhanced lab efficiency by anticipating common student errors and addressing them before they impacted project progress.</li>
+            </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+            <li><strong>Languages:</strong> Python, C++, HTML, CSS, JavaScript</li>
+            <li><strong>Platforms & Tools:</strong> Linux, GitHub, Microsoft Office Suite, Microsoft Windows, Arduino</li>
+            <li><strong>Domains:</strong> Web App Development, Robotics, Cybersecurity</li>
+            </ul>
+        </section>
+
+        <!-- Certifications and Activities -->
+        <section id="additional-qualifications">
+            <h2>Certifications & Activities</h2>
+            <dl class="qualifications-dl">
+            <dt>CompTIA Security+</dt>
+            <dd>Cybersecurity Certificate, Passed 2024</dd>
+            
+            <dt>Linux & Open Source Society</dt>
+            <dd>Active Member / Participant</dd>
+            
+            <dt>Information Technology Practicum</dt>
+            <dd>Community technology service for Teton County</dd>
+            </dl>
+        </section>
+    </main>
+</body>
+</html>
