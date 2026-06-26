@@ -14,22 +14,20 @@
     --radius-md: var(--space-unit);                 /* 8px */
     --radius-lg: calc(var(--space-unit) * 1.5);     /* 12px */
 
-    /* INDENTATION ALIGNMENTS */
-    --indent-sm: var(--space-sm);
-    --indent-md: var(--space-md);
-    --indent-lg: var(--space-lg);
-
     /* --- TYPOGRAPHY ENGINE --- */
 
     /* Font Families */
     
     /* Custom Fonts Definition */
-    --font-heading-custom: "Major Mono Display", monospace;
-    --font-body-custom: "Lora", Georgia, serif;
+    /* --font-heading-custom: "Major Mono Display", monospace;
+    --font-body-custom: "Lora", Georgia, serif; */
 
-    /* REFIXED: Both variables are explicitly mapped to distinct, verified roles */
-    --font-family-heading: var(--font-heading-custom);
-    --font-family-body: var(--font-body-custom);
+    /* Default System Fonts */
+    --font-heading-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-body-system: Georgia, Cambria, "Times New Roman", Times, serif;
+
+    --font-family-heading: var(--font-heading-system);
+    --font-family-body: var(--font-body-system);
 
     /* Font Sizes (Normalized rem-scale based on 16px base browser standard) */
     --font-size-sm: 0.875rem; /* ~14px */
