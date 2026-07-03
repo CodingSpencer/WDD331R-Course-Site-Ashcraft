@@ -1,0 +1,171 @@
+/* Navigation Links */
+nav a:not(.nav-cta) {
+    color: var(--text-muted);
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:not(.nav-cta):hover,
+nav a:not(.nav-cta):focus-visible {
+    color: var(--text-color);
+}
+
+.nav-cta {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transition: background-color 0.25s cubic-bezier(0.5, 0.8, 0.2, 1),
+                transform 0.25s cubic-bezier(0.5, 0.8, 0.2, 1);
+    display: inline-block;
+}
+
+.nav-cta:hover,
+.nav-cta:focus-visible {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.3s ease,
+                transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}   
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: var(--accent-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    transition: border-color 0.2s ease-out, 
+                background-color 0.2s ease-out, 
+                transform 0.2s ease-out;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    border-color: var(--text-muted);
+    background-color: var(--surface-color);
+    transform: translateY(-1px);
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: var(--text-muted);
+    transition: background-color 0.15s linear,
+                color 0.15s linear;
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+    background-color: var(--text-muted);
+    color: var(--bg-color);
+}
+
+/* Cards */
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    opacity: 1;
+
+    transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.3s ease,
+                transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity 0.3s ease-out,
+                display 0.3s allow-discrete;
+}
+
+@starting-style {
+    .card {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.card:hover,
+.card:focus-within {
+    background-color: var(--bg-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.card-link {
+    color: var(--link-color);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+    color: var(--link-hover-color);
+    transform: translateX(4px);
+}
+
+/* Status Badge */
+@keyframes status-pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+.status-badge {
+    display: inline-block;
+    animation: status-pulse 1.5s ease-in-out infinite alternate;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    :root:not([data-motion="allow"]) *,
+    :root:not([data-motion="allow"]) *::before,
+    :root:not([data-motion="allow"]) *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    :root:not([data-motion="allow"]) .status-badge {
+        animation: status-fade-reduced 4s ease-in-out infinite alternate !important;
+    }
+}
+
+:root[data-motion="reduce"] *,
+:root[data-motion="reduce"] *::before,
+:root[data-motion="reduce"] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+:root[data-motion="reduce"] .status-badge {
+    animation: status-fade-reduced 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes status-fade-reduced {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
