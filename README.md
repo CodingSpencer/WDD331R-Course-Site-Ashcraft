@@ -24,3 +24,12 @@ Each page now has theme switch enabled.
 - [Editorial & Cards Layout](unit-4/grid-layouts/editorial.html)
 - [Container Query Component](unit-4/advanced/container-demo.html)
 - [Sticky Element Demo](unit-4/advanced/sticky-demo.html)
+
+### Unit 5
+- [Resume Page](unit-5/resume.html)
+- [Contact Us Page](unit-5/contact.html)
+
+### Unit 6
+- [Motion](unit-6/motion/index.html)
+
+
