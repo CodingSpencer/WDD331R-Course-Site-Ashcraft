@@ -15,6 +15,32 @@ HEADER WORKSPACE DECK
     line-height: var(--line-height);
 }
 
+.icon-home {
+    fill: none; 
+    flex-shrink: 0;
+    width: 2em;
+    height: 2em;
+}
+
+.theme-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.theme-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-icon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    stroke-width: 2;
+}
+
 /* ==========================================================================
 HERO INTERACTIVE STAGE (Absolute Layering Stack)
 ========================================================================== */

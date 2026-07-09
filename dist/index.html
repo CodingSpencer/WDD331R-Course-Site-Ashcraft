@@ -4,17 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD331R - Home</title>
-    <script src="./src/js/theme-preference.js" defer></script>
-    <link rel="stylesheet" href="./dist/styles.css">
+    <script src="./src/js/theme-preference.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-H8OyhXhG.css">
 </head>
 <body>
     <header class="home-header">
         <h1>Spencer Ashcraft</h1>
         <p>WDD 331R Advanced CSS</p>
 
-        <nav class="site-nav">
-            <load src="/src/components/theme-switcher.html" />
-        </nav>
+        <details class="theme-switcher">
+    <summary class="theme-control">
+        <span class="visually-hidden">Theme scheme</span>
+    </summary>
+    <div class="theme-extra" role="group" aria-label="Choose color scheme">
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="light">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/SVG-ueyLsW1f.html#icon-sun"></use>
+            </svg>
+            <span>Light</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="system" checked>
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/SVG-ueyLsW1f.html#icon-settings"></use>
+            </svg>
+            <span>System</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="dark">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/SVG-ueyLsW1f.html#icon-moon"></use>
+            </svg>
+            <span>Dark</span>
+        </label>
+    </div>
+</details>
     </header>
 
     <main>
@@ -100,7 +127,6 @@
                                 Motion
                             </a>
                         </li>
-                    </ul>
                 </div>
             </nav>
         </section>

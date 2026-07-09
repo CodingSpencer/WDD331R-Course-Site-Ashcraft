@@ -1,14 +1,11 @@
-/* Baseline Fallback */
 :root {
     color-scheme: light;
 }
 
-/* Shift engine state to dark if the dark input is checked */
 html:has(input[name="theme-preference"][value="dark"]:checked) {
     color-scheme: dark;
 }
 
-/* Check system settings only if the user chooses 'system' */
 @media (prefers-color-scheme: dark) {
     html:has(input[name="theme-preference"][value="system"]:checked) {
         color-scheme: dark;
@@ -27,27 +24,29 @@ details.theme-switcher {
     box-shadow: none;
     overflow: visible;
     color: inherit;
+    font-size: var(--font-size-md, 1rem);
+    line-height: 1;
 
     &:focus,
     &:focus-visible {
         outline: none;
     }
 
-    /* Target the toggle button wrapper */
     > summary.theme-control {
         text-transform: none;
         font-weight: normal;
         list-style: none;
         width: max-content;
         box-sizing: border-box;
-        display: inline-list-item;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
+        gap: var(--spacing-xs, 6px);
         min-width: calc(var(--icon-size-md) + 5rem);
         min-height: calc(var(--icon-size-md) + var(--spacing-md));
         margin: 0;
         padding: 0 var(--spacing-md);
-        font-size: var(--icon-size-md); 
+        font-size: inherit;
         line-height: 1;
         color: var(--header-text);
         background-color: var(--theme-toggle-bg, transparent);
@@ -59,21 +58,16 @@ details.theme-switcher {
             border-color var(--transition-base, 0.2s);
 
         &::-webkit-details-marker {
-            display: inline-block;
-            margin-right: var(--spacing-xs, 4px);
-            color: inherit;
+            display: none;
         }
 
         &::marker {
-            display: inline-block;
-            margin-right: var(--spacing-xs, 4px);
-            color: inherit;
+            display: none;
         }
 
         &::after {
             font-size: 0.9rem; 
             font-family: inherit;
-            margin-left: var(--spacing-xs, 4px);
             vertical-align: middle;
         }
 
@@ -92,7 +86,6 @@ details.theme-switcher {
         }
     }
 
-    /* Target the dropdown panel container */
     > .theme-extra {
         position: absolute;
         z-index: 50;
@@ -118,7 +111,16 @@ details.theme-switcher {
         animation: theme-extra-reveal 0.2s ease-out;
     }
 
-    /* Style the option rows inside the panel */
+    .theme-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        stroke: currentColor;
+        fill: none;
+        flex-shrink: 0;
+        transition: color var(--transition-base, 0.2s);
+    }
+
     .theme-label {
         position: relative;
         display: flex;
@@ -144,21 +146,16 @@ details.theme-switcher {
             pointer-events: none;
         }
 
-        /* 
-           FIXED LOCAL SELECTION HIGHLIGHT: 
-           Changes row colors and internal text spans immediately when input is checked 
-        */
         &:has(input:checked) {
             background-color: var(--border-color) !important;
             font-weight: bold !important;
 
-            /* Select all text/emoji spans inside the active row option */
-            span {
+            span,
+            .theme-icon {
                 color: var(--accent-color) !important;
             }
         }
 
-        /* Focus state indicator */
         &:has(input:focus-visible) {
             outline: var(--outline-width, 2px) solid var(--accent-color);
             outline-offset: calc(var(--outline-width, 2px) * -1); 
@@ -166,35 +163,24 @@ details.theme-switcher {
     }
 }
 
-/* Global Pseudo-Element Sync Engine (Button Updates) */
 html:has(input[name='theme-preference'][value='light']:checked) {
-    & details.theme-switcher > summary.theme-control::before {
-        content: '☀️ ';
-    }
     & details.theme-switcher > summary.theme-control::after {
         content: 'Light';
     }
 }
 
 html:has(input[name='theme-preference'][value='dark']:checked) {
-    & details.theme-switcher > summary.theme-control::before {
-        content: '🌖 ';
-    }
     & details.theme-switcher > summary.theme-control::after {
         content: 'Dark';
     }
 }
 
 html:has(input[name='theme-preference'][value='system']:checked) {
-    & details.theme-switcher > summary.theme-control::before {
-        content: '⚙️ ';
-    }
     & details.theme-switcher > summary.theme-control::after {
         content: 'System';
     }
 }
 
-/* Helper to accessibly hide layout text definitions */
 .visually-hidden {
     position: absolute;
     width: 1px;
