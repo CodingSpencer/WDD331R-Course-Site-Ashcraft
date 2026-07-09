@@ -7,12 +7,15 @@
         "header header"
         "sidebar main"
         "footer footer";
+    /* Cascades your core text color token across the grid layout */
+    color: var(--text-color);
 }
 
 /* HEADER */
 .editorial-page header {
     grid-area: header;
-    background-color: #f8f8f8;
+    background-color: var(--surface-color); /* Swapped from #f8f8f8 */
+    border: 1px solid var(--border-color);   /* Added for clean structural panel lines in dark mode */
     padding: 20px;
     margin-bottom: 40px;
     border-radius: 8px;
@@ -31,45 +34,57 @@
     border: none;
 }
 
+/* NAVIGATION BUTTONS */
 .editorial-page .btn {
     display: inline-block;
     text-decoration: none;
-    background-color: #0076ff;
-    color: #ffffff;
+    background-color: var(--primary-color); /* Swapped from #0076ff to primary accent green */
+    color: light-dark(#ffffff, #111111);    /* Flips text color dynamically for accessibly clean contrast */
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 14px;
     white-space: nowrap;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .editorial-page .btn:hover {
-    background-color: #0055b3;
+    background-color: var(--accent-color); /* Swapped from #0055b3 to your green hover state */
 }
 
 .editorial-page .btn-home {
-    background-color: #333333;
+    background-color: var(--text-color);   /* Swapped from #333333 to inverted neutral style */
+    color: var(--bg-color);                /* Swapped from #ffffff */
 }
 
 .editorial-page .btn-home:hover {
-    background-color: #1a1a1a;
+    background-color: var(--text-muted);  /* Swapped from #1a1a1a */
 }
 
+/* SIDEBAR LAYOUT LAYER */
 .editorial-page aside {
     grid-area: sidebar;
-    background-color: #e0e0e0;
+    background-color: var(--surface-color); /* Swapped from #e0e0e0 to clean semantic container surface */
+    border: 1px solid var(--border-color);  /* Encapsulates layout blocks cleanly across theme variants */
+    border-radius: 8px;
     padding: 20px;
 }
 
+/* MAIN BODY CANVAS */
 .editorial-page main {
     grid-area: main;
-    background-color: #ffffff;
+    background-color: var(--bg-color);      /* Swapped from #ffffff */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     padding: 20px;
 }
 
+/* FOOTER */
 .editorial-page footer {
     grid-area: footer;
-    background-color: #f8f8f8;
+    background-color: var(--surface-color); /* Swapped from #f8f8f8 */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     padding: 20px;
     text-align: center;
+    color: var(--text-muted);               /* Pulls secondary text token automatically */
 }

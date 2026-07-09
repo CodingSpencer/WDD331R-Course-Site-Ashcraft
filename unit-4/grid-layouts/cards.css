@@ -97,4 +97,113 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+}/* Style the main page layout */
+.articles-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    /* Cascades core text color dynamically */
+    color: var(--text-color);
+}
+
+/* Header */
+.articles-page header {
+    grid-area: header;
+    background-color: var(--surface-color); /* Swapped from #f8f8f8 */
+    border: 1px solid var(--border-color);   /* Added to keep clean structure in dark mode */
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.articles-page .header-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.articles-page header h1 {
+    margin: 0 0 4px 0;
+    font-size: 24px;
+    color: var(--title-color); /* Uses your dynamic brand accent green */
+}
+
+.articles-page header p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted); /* Swapped color definition */
+}
+
+.articles-page .nav-links-row {
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Buttons */
+.articles-page .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary-color); /* Swapped from #0076ff to your brand primary color */
+    color: light-dark(#ffffff, #111111);    /* Flips text color for accessibility contrast against the green */
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.articles-page .btn:hover {
+    background-color: var(--accent-color); /* Swapped from #0055b3 to accent green hover */
+}
+
+.articles-page .btn-home {
+    /* Uses text color tokens as a background to create an elegant inverted neutral button */
+    background-color: var(--text-color);   /* Swapped from #333333 */
+    color: var(--bg-color);                /* Swapped from #ffffff */
+}
+
+.articles-page .btn-home:hover {
+    background-color: var(--text-muted);  /* Swapped from #1a1a1a */
+}
+
+/* Card Grid */
+.articles-page .card-grid {
+    display: grid;
+    /* This automatically wraps cards */
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 20px;
+}
+
+@supports (grid-template-rows: subgrid) {
+    .articles-page .card-grid .card {
+        /* This allows us to use subgrids */
+        grid-template-rows: subgrid;
+    }
+}
+
+/* Card Styling */
+.articles-page .card-grid .card {
+    background-color: var(--bg-color);       /* Swapped from #ffffff */
+    border: 1px solid var(--border-color);  /* Swapped from #e0e0e0 */
+    color: var(--text-color);               /* Ensures nested text color scales */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.articles-page .card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px; /* Optional: matches card curvature cleanly */
 }
