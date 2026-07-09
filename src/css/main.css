@@ -18,7 +18,7 @@
 @import "./components/header.css" layer(components);
 @import "./components/theme-toggle.css" layer(components);
 @import "./components/effects.css" layer(components);
-@import "./components/icon.css" layer(components);
+@import "./components/icons.css" layer(components);
 @import "./components/glass.css" layer(components);
 
 /* UTILITIES */
