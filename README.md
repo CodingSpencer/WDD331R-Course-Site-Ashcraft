@@ -1,6 +1,6 @@
 ## GitHub
 
-- [Live GitHub Page](https://codingspencer.github.io/WDD331R-Course-Site-Ashcraft/)
+- [Live Site Page](https://wdd331r-course-site.netlify.app/)
 - [Source Repository](https://github.com/CodingSpencer/WDD331R-Course-Site-Ashcraft)
 
 ## Theme Switch
