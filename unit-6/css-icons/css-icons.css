@@ -1,0 +1,172 @@
+/* --- Base Layout --- */
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 2rem;
+}
+
+.icon-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 3rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: color 0.3s ease;
+}
+
+/* --- ICON 1: Hamburger Morph --- */
+.hamburger-btn {
+    /* Resets default browser button styles for a clean layout */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    /* Increases the touch target size for better mobile accessibility */
+    padding: 1rem;
+    /* Inherits text color from the parent container so currentColor works */
+    color: inherit;
+    /* Centers the hamburger icon perfectly within the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Creates the middle line of the hamburger menu using the main element's background */
+.hamburger-icon {
+    display: block;
+    width: 32px;
+    height: 4px;
+    /* Uses the color inherited from .hamburger-btn */
+    background-color: currentColor;
+    /* Establishes the anchor point for the ::before and ::after pseudo-elements */
+    position: relative;
+    border-radius: 2px;
+    /* Animates the middle line fading out when toggled */
+    transition: background-color 0.3s ease;
+}
+
+/* Generates the top and bottom lines of the menu using pseudo-elements */
+.hamburger-icon::before,
+.hamburger-icon::after {
+    /* Required property; without 'content', pseudo-elements will not render */
+    content: "";
+    /* Anchors to the middle line (.hamburger-icon) */
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 4px;
+    background-color: currentColor;
+    border-radius: 2px;
+    /* Animates both the rotation and the vertical sliding movement */
+    transition: transform 0.3s ease, top 0.3s ease;
+}
+
+/* Offsets the top line 10px above the middle line */
+.hamburger-icon::before { top: -10px; }
+/* Offsets the bottom line 10px below the middle line */
+.hamburger-icon::after { top: 10px; }
+
+/* Morph State: Turns the Hamburger into an 'X' (Close Icon) */
+.hamburger-btn[aria-expanded="true"] .hamburger-icon {
+    /* Hides the middle line to make room for the cross */
+    background-color: transparent; 
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-icon::before {
+    /* Drops the top line down to the absolute center */
+    top: 0;
+    /* Rotates it forward to form the first diagonal of the 'X' */
+    transform: rotate(45deg);
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-icon::after {
+    /* Pulls the bottom line up to the absolute center */
+    top: 0;
+    /* Rotates it backward to form the second diagonal of the 'X' */
+    transform: rotate(-45deg);
+}
+
+/* --- Reduced Motion Guard --- */
+@media (prefers-reduced-motion: reduce) {
+    /* Instantly jumps to the final state instead of animating for users with vestibular disorders */
+    .hamburger-icon,
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+        transition: none !important;
+    }
+}
+
+/* --- ICON 2: Play to Square Morph --- */
+.play-btn {
+    /* Structural reset similar to the hamburger button */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Creates the play triangle using transparent top/bottom borders intersecting a solid left border */
+.play-icon {
+    display: block;
+    /* Both width and height must be 0 to force the borders to meet in the center */
+    width: 0;
+    height: 0; 
+    border-style: solid;
+    /* The 12px top and bottom borders create the 24px overall height and the diagonal angles */
+    border-width: 12px 0 12px 24px;
+    /* Top, Right, and Bottom borders are transparent. Left border is the solid color of the triangle */
+    border-color: transparent transparent transparent currentColor;
+    /* Transitions the border size and element height to create a smooth shape change */
+    transition: border-width 0.3s ease, height 0.3s ease; 
+}
+
+/* Morphs into a square by shrinking the transparent angled borders to 0 and expanding element height */
+.play-btn[aria-pressed="true"] .play-icon {
+    /* Removes the angled top/bottom borders completely, leaving only the 24px wide left block */
+    border-width: 0 0 0 24px;
+    /* Expands the actual element height to 24px to fill in the space and form the square */
+    height: 24px; 
+}
+
+/* --- ICON 3: Magnifying Glass --- */
+
+/* Creates the main lens ring using a standard border and 50% border-radius */
+.search-icon {
+    /* Establishes the anchor for the magnifying glass handle */
+    position: relative;
+    width: 24px;
+    height: 24px;
+    /* The main circle of the magnifying glass */
+    border: 4px solid currentColor;
+    /* Rounds the square <div> into a perfect circle */
+    border-radius: 50%;
+    /* Ensures the 4px border is drawn entirely inside the 24x24px footprint */
+    box-sizing: border-box;
+}
+
+/* Generates the handle using an ::after pseudo-element rotated into place */
+.search-icon::after {
+    content: "";
+    position: absolute;
+    /* Pushes the handle outside the bottom right edge of the circle */
+    bottom: -8px;
+    right: -8px;
+    width: 4px;
+    height: 12px;
+    background-color: currentColor;
+    /* Tilts the handle to point diagonally outward */
+    transform: rotate(-45deg);
+    border-radius: 2px;
+}

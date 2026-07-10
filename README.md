@@ -31,5 +31,6 @@ Each page now has theme switch enabled.
 
 ### Unit 6
 - [Motion](unit-6/motion/index.html)
+- [Pure CSS](unit-6/css-icons/index.html)
 
 
