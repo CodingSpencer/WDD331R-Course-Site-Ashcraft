@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward Activity Board</title>
+    <script src="../../src/js/theme-preference.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/styles-Cs1QqizS.css">
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style=" display: none; position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    </symbol>
+</svg>
+
+<nav class="site-nav">
+    <a href="/index.html" aria-label="Home">
+        <svg class="icon-home" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <use href="#icon-home"></use>
+        </svg>
+    </a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
+    <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </symbol>
+</svg>
+
+<details class="theme-switcher">
+    <summary class="theme-control">
+        <svg class="theme-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <use href="#icon-settings"></use>
+        </svg>
+        <span class="visually-hidden">Theme scheme</span>
+    </summary>
+    <div class="theme-extra" role="group" aria-label="Choose color scheme">
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="light">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-sun"></use>
+            </svg>
+            <span>Light</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="system" checked>
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-settings"></use>
+            </svg>
+            <span>System</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="dark">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-moon"></use>
+            </svg>
+            <span>Dark</span>
+        </label>
+    </div>
+</details>
+</nav>
+
+    <header class="board-header">
+        <h1>Riverside 4th Ward</h1>
+        <p>Upcoming activities, service opportunities, and announcements.</p>
+    </header>
+
+    <main>
+        <section class="card-group">
+            <h2>This Week</h2>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-tag">Service</div>
+                    <h3>Food Bank Volunteer Day</h3>
+                    <p>Help sort and package donations at the community food bank. Families welcome. Meet in the east parking lot at 8:00 AM.</p>
+                    <div class="card-meta">
+                        <span>Saturday, 8:00 AM</span>
+                        <a href="#">Details</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Youth</div>
+                    <h3>Standards Night</h3>
+                    <p>An evening focused on preparing for mission calls, temple covenants, and building a Christlike life. Refreshments provided.</p>
+                    <div class="card-meta">
+                        <span>Friday, 7:00 PM</span>
+                        <a href="#">Details</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Ward</div>
+                    <h3>Potluck Dinner</h3>
+                    <p>Bring a dish to share and enjoy an evening of food and fellowship in the cultural hall. All families are invited.</p>
+                    <div class="card-meta">
+                        <span>Saturday, 5:30 PM</span>
+                        <a href="#">Details</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card-group">
+            <h2>Coming Up</h2>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-tag">Relief Society</div>
+                    <h3>Enrichment Night</h3>
+                    <p>Developing Christlike attributes through creative arts. Supplies provided. Bring a friend who might enjoy the evening.</p>
+                    <div class="card-meta">
+                        <span>Wednesday, 6:30 PM</span>
+                        <a href="#">Details</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Elders Quorum</div>
+                    <h3>Moving Help Needed</h3>
+                    <p>A family in the ward is relocating this month. Sign up to help load and unload on moving day. Trucks are arranged.</p>
+                    <div class="card-meta">
+                        <span>Next Saturday, 9:00 AM</span>
+                        <a href="#">Details</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Stake</div>
+                    <h3>Stake Conference</h3>
+                    <p>General session on Sunday at 10:00 AM. Adult session Saturday evening at 7:00 PM. No regular ward meetings this week.</p>
+                    <div class="card-meta">
+                        <span>Sunday, 10:00 AM</span>
+                        <a href="#">Details</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="card-group">
+            <h2>Announcements</h2>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-tag">Bishopric</div>
+                    <h3>New Calling Sustainings</h3>
+                    <p>Several new callings will be presented for a sustaining vote during sacrament meeting this Sunday. Please plan to attend.</p>
+                    <div class="card-meta">
+                        <span>This Sunday</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-tag">Temple</div>
+                    <h3>Temple Night</h3>
+                    <p>Ward temple night is the second Friday of each month. Contact the temple committee for ride sharing and scheduling.</p>
+                    <div class="card-meta">
+                        <span>Second Friday Monthly</span>
+                        <a href="#">Sign Up</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="board-footer">
+        <p>&copy; Riverside 4th Ward. Built as a WDD 331R assignment.</p>
+    </footer>
+</body>
+</html>

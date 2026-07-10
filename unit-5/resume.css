@@ -1,3 +1,107 @@
+/* Base Layout */
+.resume-container {
+    max-width: 800px;
+    margin: var(--space-xl) auto;
+    padding: 0 var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+/* Header + Contact Row */
+.resume-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    border-bottom: var(--outline-width) solid currentColor;
+    padding-bottom: var(--space-sm);
+}
+
+.resume-header h1 {
+    margin: 0;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+}
+
+/* Section Headings + Icons */
+section h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    padding-bottom: calc(var(--space-xs) * 0.5);
+    border-bottom: calc(var(--outline-width) * 0.5) solid currentColor;
+}
+
+section h2 .icon {
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* Spacing */
+.job-entry, .education-entry {
+    margin-bottom: var(--space-md);
+}
+
+.job-entry:last-of-type, .education-entry:last-of-type {
+    margin-bottom: 0;
+}
+
+.job-meta, .institution, .date {
+    margin: 0 0 var(--space-xs) 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: calc(var(--space-xs) * 0.5);
+}
+
+p, ul, dl {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+ul {
+    padding-left: var(--space-md);
+}
+
+li {
+    margin-bottom: var(--space-xs);
+    line-height: 1.5;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+.qualifications-dl dt {
+    font-weight: bold;
+    margin-top: var(--space-sm);
+}
+
+.qualifications-dl dt:first-of-type {
+    margin-top: 0;
+}
+
+.qualifications-dl dd {
+    margin-left: 0;
+    margin-bottom: var(--space-sm);
+}
+
 @media print {
     body {
         font-family: var(--font-family-body);
@@ -51,9 +155,17 @@
         widows: 3;
     }
 
+    li {
+        margin-bottom: var(--space-xs);
+    }
+
     a {
         text-decoration: none;
         color: light-dark(var(--seed-text), #000000);
+    }
+
+    .contact-info-list a::after {
+        content: none !important;
     }
 
     a[href^="http"]::after,
