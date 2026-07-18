@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Effects Showcase</title>
+    <script src="../../src/js/theme-preference.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/styles-BnpAGqHI.css">
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </symbol>
+    </svg>
+
+    <nav class="site-nav">
+        <a href="/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true"></svg>
+                <symbol id="icon-home" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                </symbol>
+            </svg>
+        </a>
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
+    <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </symbol>
+</svg>
+
+<details class="theme-switcher">
+    <summary class="theme-control">
+        <svg class="theme-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <use href="#icon-settings"></use>
+        </svg>
+        <span class="visually-hidden">Theme scheme</span>
+    </summary>
+    <div class="theme-extra" role="group" aria-label="Choose color scheme">
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="light">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-sun"></use>
+            </svg>
+            <span>Light</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="system" checked>
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-settings"></use>
+            </svg>
+            <span>System</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="dark">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-moon"></use>
+            </svg>
+            <span>Dark</span>
+        </label>
+    </div>
+</details>
+        
+        <ul>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#" aria-current="page">Effects</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO: Use a gradient overlay and text-shadow for depth -->
+    <header class="hero">
+        <img
+            class="hero-image"
+            src="https://picsum.photos/seed/hero-effects/1200/500"
+            alt="Landscape placeholder for hero section"
+        >
+        <div class="hero-content">
+            <h1>Visual Effects Showcase</h1>
+            <p>Shadows, gradients, and filters working together.</p>
+        </div>
+    </header>
+
+    <main>
+        <a href="/index.html" class="back-link">← Back to Portfolio</a>
+        
+        <!-- CARDS: Elevation shadows, hover transitions -->
+        <section class="card-section">
+            <h2>Elevation Cards</h2>
+            <div class="cards">
+                <article class="card">
+                    <img
+                        class="card-image"
+                        src="https://picsum.photos/seed/card-1/400/250"
+                        alt="Placeholder image"
+                    >
+                    <!-- Replace placeholder images with your own if you prefer -->
+                    <div class="card-body">
+                        <h3>Layered Shadows</h3>
+                        <p>
+                            Multiple shadow layers create realistic depth
+                            that changes on hover.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img
+                        class="card-image"
+                        src="https://picsum.photos/seed/card-2/400/250"
+                        alt="Placeholder image"
+                    >
+                    <div class="card-body">
+                        <h3>Gradient Surfaces</h3>
+                        <p>
+                            A subtle gradient on the card background adds
+                            dimension without distracting from content.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img
+                        class="card-image"
+                        src="https://picsum.photos/seed/card-3/400/250"
+                        alt="Placeholder image"
+                    >
+                    <div class="card-body">
+                        <h3>Filtered Images</h3>
+                        <p>
+                            A grayscale or sepia filter on the image that
+                            lifts on hover draws attention to active cards.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- GLASS PANEL: backdrop-filter for frosted glass -->
+        <section class="glass-section">
+            <div class="glass-background">
+                <img
+                    src="https://picsum.photos/seed/glass-bg/1200/400"
+                    alt="Background image behind glass panel"
+                    class="glass-bg-image"
+                >
+            </div>
+            <div class="glass-panel">
+                <h2>Frosted Glass</h2>
+                <p>
+                    This panel uses backdrop-filter to blur and saturate the
+                    image behind it. The text stays sharp while the background
+                    softens into a frosted surface.
+                </p>
+            </div>
+        </section>
+
+        <!-- ICON ROW: drop-shadow on transparent images -->
+        <section class="icon-section">
+            <h2>Drop Shadow on Transparent Images</h2>
+            <p>
+                These icons use drop-shadow() instead of box-shadow so the shadow
+                follows the actual shape of each image rather than its bounding box.
+            </p>
+            <div class="icon-row">
+                <!-- Replace these with your own transparent PNGs or SVGs -->
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/heart.svg" alt="Heart icon">
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/star.svg" alt="Star icon">
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/bookmark.svg" alt="Bookmark icon">
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/message-circle.svg" alt="Message icon">
+            </div>
+        </section>
+
+        <section class="clip-section">
+            <h2>Clip-Path Masking</h2>
+            <p>
+                This section demonstrates using CSS <code>clip-path</code> with a circular mask to cleanly crop a rectangular image into a perfect circle.
+            </p>
+            <div class="shield-container">
+                <img class="shield-image" src="/assets/shield-4IGqVT6m.png" alt="Shield Graphic">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 My Practice Site</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Icons Demo</title>
+  <link rel="stylesheet" crossorigin href="/assets/unit6Icons-4s-eHSml.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-BnpAGqHI.css">
+</head>
+<body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" style=" display: none; position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    </symbol>
+</svg>
+
+<nav class="site-nav">
+    <a href="/index.html" aria-label="Home">
+        <svg class="icon-home" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <use href="#icon-home"></use>
+        </svg>
+    </a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
+    <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </symbol>
+</svg>
+
+<details class="theme-switcher">
+    <summary class="theme-control">
+        <svg class="theme-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <use href="#icon-settings"></use>
+        </svg>
+        <span class="visually-hidden">Theme scheme</span>
+    </summary>
+    <div class="theme-extra" role="group" aria-label="Choose color scheme">
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="light">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-sun"></use>
+            </svg>
+            <span>Light</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="system" checked>
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-settings"></use>
+            </svg>
+            <span>System</span>
+        </label>
+        
+        <label class="theme-label">
+            <input type="radio" name="theme-preference" value="dark">
+            <svg class="theme-icon" aria-hidden="true" focusable="false">
+                <use href="#icon-moon"></use>
+            </svg>
+            <span>Dark</span>
+        </label>
+    </div>
+</details>
+</nav>
+    </header>
+
+    <main>
+        <a href="/index.html" class="back-link">← Back to Portfolio</a>
+        
+        <!-- The wrapper sets a color to prove currentColor works -->
+        <div class="icon-wrapper" style="color: #2563eb;">
+            
+            <!-- Icon 1: Hamburger Menu (Uses ::before and ::after) -->
+            <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle menu">
+                <span class="hamburger-icon"></span>
+            </button>
+
+            <!-- Icon 2: Play Button (Built with borders) -->
+            <button class="play-btn" aria-pressed="false" aria-label="Toggle play">
+                <span class="play-icon"></span>
+            </button>
+
+            <!-- Icon 3: Search Magnifying Glass (Built with borders and ::after) -->
+            <div class="search-icon" aria-label="Search" role="img"></div>
+
+        </div>
+    </main>
+
+    <script>
+        // Handle the aria-expanded state for the hamburger morph
+        const menuBtn = document.querySelector('.hamburger-btn');
+        
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Handle the aria-pressed state for the play morph
+        const playBtn = document.querySelector('.play-btn');
+
+        playBtn.addEventListener('click', () => {
+            const isPressed = playBtn.getAttribute('aria-pressed') === 'true';
+            playBtn.setAttribute('aria-pressed', !isPressed);
+        });
+    </script>
+</body>
+</html>
