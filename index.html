@@ -22,6 +22,111 @@
     </section>
 
     <div class="page-layout">
+        <aside class="sidebar" id="sidebar">
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="true" aria-label="Toggle navigation menu">
+                <span class="hamburger-icon"></span>
+            </button>
+            
+            <div class="sidebar-content">
+                <load src="/src/components/theme-switcher.html" />
+                
+                <nav class="unit-links-nav">
+                    <h2>Assignments</h2>
+                    
+                    <div class="unit-group">
+                        <h3>Unit 1</h3>
+                        <ul>
+                            <li>
+                                <a href="unit-1/custom-properties/index.html">
+                                    Custom Properties and Nesting
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="unit-group">
+                        <h3>Unit 2</h3>
+                        <ul>
+                            <li>
+                                <a href="unit-2/layered-components/index.html">
+                                    Layered Components
+                                </a>
+                            </li>
+                            <li>
+                                <a href="unit-2/lightning-css-demo/index.html">
+                                    Lightning CSS Demo
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="unit-group">
+                        <h3>Unit 3</h3>
+                        <ul>
+                            <li>
+                                <a href="unit-3/visual-effects/index.html">
+                                    Visual Effects
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="unit-group">
+                        <h3>Unit 4</h3>
+                        <ul>
+                            <li>
+                                <a href="unit-4/grid-layouts/editorial.html">
+                                    Editorial & Cards Layout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="unit-4/advanced/container-demo.html">
+                                    Container Query Component
+                                </a>
+                            </li>
+                            <li>
+                                <a href="unit-4/advanced/sticky-demo.html">
+                                    Sticky Element Demo
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="unit-group">
+                        <h3>Unit 5</h3>
+                        <ul>
+                            <li>
+                                <a href="unit-5/resume.html">
+                                    Resume Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="unit-5/contact.html">
+                                    Contact Us Page
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="unit-group">
+                        <h3>Unit 6</h3>
+                        <ul>
+                            <li>
+                                <a href="unit-6/motion/index.html">
+                                    Motion
+                                </a>
+                            </li>
+                            <li>
+                                <a href="unit-6/css-icons/index.html">
+                                    Pure CSS Icons
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+
         <main>
             <!-- ABOUT SECTION -->
             <section class="about-section" id="about">
@@ -88,105 +193,17 @@
                 </div>
             </section>
         </main>
-
-        <aside class="sidebar">
-            <load src="/src/components/theme-switcher.html" />
-            
-            <nav class="unit-links-nav">
-                <h2>Assignments</h2>
-                
-                <div class="unit-group">
-                    <h3>Unit 1</h3>
-                    <ul>
-                        <li>
-                            <a href="unit-1/custom-properties/index.html">
-                                Custom Properties and Nesting
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="unit-group">
-                    <h3>Unit 2</h3>
-                    <ul>
-                        <li>
-                            <a href="unit-2/layered-components/index.html">
-                                Layered Components
-                            </a>
-                        </li>
-                        <li>
-                            <a href="unit-2/lightning-css-demo/index.html">
-                                Lightning CSS Demo
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="unit-group">
-                    <h3>Unit 3</h3>
-                    <ul>
-                        <li>
-                            <a href="unit-3/visual-effects/index.html">
-                                Visual Effects
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="unit-group">
-                    <h3>Unit 4</h3>
-                    <ul>
-                        <li>
-                            <a href="unit-4/grid-layouts/editorial.html">
-                                Editorial & Cards Layout
-                            </a>
-                        </li>
-                        <li>
-                            <a href="unit-4/advanced/container-demo.html">
-                                Container Query Component
-                            </a>
-                        </li>
-                        <li>
-                            <a href="unit-4/advanced/sticky-demo.html">
-                                Sticky Element Demo
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="unit-group">
-                    <h3>Unit 5</h3>
-                    <ul>
-                        <li>
-                            <a href="unit-5/resume.html">
-                                Resume Page
-                            </a>
-                        </li>
-                        <li>
-                            <a href="unit-5/contact.html">
-                                Contact Us Page
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="unit-group">
-                    <h3>Unit 6</h3>
-                    <ul>
-                        <li>
-                            <a href="unit-6/motion/index.html">
-                                Motion
-                            </a>
-                        </li>
-                        <li>
-                            <a href="unit-6/css-icons/index.html">
-                                Pure CSS Icons
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </aside>
     </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
 </body>
 </html>
