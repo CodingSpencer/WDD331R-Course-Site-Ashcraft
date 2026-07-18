@@ -280,11 +280,11 @@ BUTTON STYLES
 }
 
 /* ==========================================================================
-PAGE LAYOUT (Homepage with sidebar)
+PAGE LAYOUT (Homepage with collapsible sidebar)
 ========================================================================== */
 .page-layout {
     display: grid;
-    grid-template-columns: 1fr clamp(250px, 30%, 350px);
+    grid-template-columns: clamp(250px, 20%, 280px) 1fr;
     gap: var(--space-lg);
     max-width: 1400px;
     margin: 0 auto;
@@ -297,6 +297,25 @@ PAGE LAYOUT (Homepage with sidebar)
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     align-self: start;
+    transition: width var(--transition-base), padding var(--transition-base);
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    padding: var(--space-md);
+}
+
+.sidebar.collapsed .sidebar-content {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.collapsed h2,
+.sidebar.collapsed .unit-group h3,
+.sidebar.collapsed .unit-group ul,
+.sidebar.collapsed .theme-control {
+    display: none;
 }
 
 .sidebar h2 {
@@ -305,18 +324,67 @@ PAGE LAYOUT (Homepage with sidebar)
     color: var(--title-color);
 }
 
-@container (max-width: 768px) {
-    .page-layout {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        order: -1;
-    }
+/* Menu Toggle Button */
+.menu-toggle {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.hamburger-icon {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: var(--text-color);
+    position: relative;
+    border-radius: 2px;
+    transition: background-color var(--transition-base);
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: transform var(--transition-base), top var(--transition-base);
+}
+
+.hamburger-icon::before { top: -8px; }
+.hamburger-icon::after { top: 8px; }
+
+.menu-toggle[aria-expanded="true"] .hamburger-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger-icon {
+    background-color: transparent;
 }
 
 @media (max-width: 768px) {
     .page-layout {
         grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
     }
 }

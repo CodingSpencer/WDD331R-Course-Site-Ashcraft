@@ -5,10 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spencer Ashcraft - Portfolio</title>
     <script src="./src/js/theme-preference.js" defer></script>
-  <link rel="stylesheet" crossorigin href="/assets/styles-BnpAGqHI.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-DR6miGJ8.css">
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero__title">Spencer Ashcraft</h1>
+            <p class="hero__subtitle">Software Engineering Student | CSS Architecture Specialist</p>
+            <p class="hero__description">
+                Building robust back-end systems and crafting beautiful, accessible user interfaces.
+                Passionate about database design, cloud infrastructure, and modern CSS techniques.
+            </p>
+            <a href="#featured" class="btn btn-primary">View My Work</a>
+        </div>
+    </section>
+
+    <div class="page-layout">
+        <main>
+            <!-- ABOUT SECTION -->
+            <section class="about-section" id="about">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a Software Engineering student at BYU-Idaho with a focus on back-end architecture, 
+                        relational database management, and secure system design. When I'm not coding, you'll 
+                        find me contributing to open-source projects or optimizing my Linux workflow.
+                    </p>
+                    <div class="skills-highlight">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURED WORK SECTION -->
+            <section id="featured" class="card-group">
+                <h2>Featured Projects</h2>
+                <div class="cards">
+                    <article class="card">
+                        <div class="card-tag">Unit 4</div>
+                        <h3>Grid Layouts</h3>
+                        <p>Editorial and card layouts using CSS Grid with named areas and responsive auto-fit patterns.</p>
+                        <div class="card-meta">
+                            <span>CSS Grid</span>
+                            <a href="unit-4/grid-layouts/editorial.html">View Work →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-tag">Unit 2</div>
+                        <h3>Layered Components</h3>
+                        <p>Complex UI components with proper stacking context, z-index management, and visual hierarchy.</p>
+                        <div class="card-meta">
+                            <span>UI Architecture</span>
+                            <a href="unit-2/layered-components/index.html">View Work →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-tag">Unit 6</div>
+                        <h3>Motion & Animation</h3>
+                        <p>Smooth transitions, keyframe animations, and reduced-motion support for accessible interactions.</p>
+                        <div class="card-meta">
+                            <span>Web Animation</span>
+                            <a href="unit-6/motion/index.html">View Work →</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-tag">Unit 5</div>
+                        <h3>Professional Presence</h3>
+                        <p>Resume and contact pages showcasing professional communication and form design.</p>
+                        <div class="card-meta">
+                            <span>Professional</span>
+                            <a href="unit-5/resume.html">View Resume →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
     <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="4"/>
         <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
@@ -55,90 +137,10 @@
         </label>
     </div>
 </details>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero__title">Spencer Ashcraft</h1>
-            <p class="hero__subtitle">Software Engineering Student | CSS Architecture Specialist</p>
-            <p class="hero__description">
-                Building robust back-end systems and crafting beautiful, accessible user interfaces.
-                Passionate about database design, cloud infrastructure, and modern CSS techniques.
-            </p>
-            <a href="#featured" class="btn btn-primary">View My Work</a>
-        </div>
-    </section>
-
-    <main>
-        <!-- ABOUT SECTION -->
-        <section class="about-section" id="about">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>
-                    I'm a Software Engineering student at BYU-Idaho with a focus on back-end architecture, 
-                    relational database management, and secure system design. When I'm not coding, you'll 
-                    find me contributing to open-source projects or optimizing my Linux workflow.
-                </p>
-                <div class="skills-highlight">
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">Linux</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- FEATURED WORK SECTION -->
-        <section id="featured" class="card-group">
-            <h2>Featured Projects</h2>
-            <div class="cards">
-                <article class="card">
-                    <div class="card-tag">Unit 4</div>
-                    <h3>Grid Layouts</h3>
-                    <p>Editorial and card layouts using CSS Grid with named areas and responsive auto-fit patterns.</p>
-                    <div class="card-meta">
-                        <span>CSS Grid</span>
-                        <a href="unit-4/grid-layouts/editorial.html">View Work →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-tag">Unit 2</div>
-                    <h3>Layered Components</h3>
-                    <p>Complex UI components with proper stacking context, z-index management, and visual hierarchy.</p>
-                    <div class="card-meta">
-                        <span>UI Architecture</span>
-                        <a href="unit-2/layered-components/index.html">View Work →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-tag">Unit 6</div>
-                    <h3>Motion & Animation</h3>
-                    <p>Smooth transitions, keyframe animations, and reduced-motion support for accessible interactions.</p>
-                    <div class="card-meta">
-                        <span>Web Animation</span>
-                        <a href="unit-6/motion/index.html">View Work →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-tag">Unit 5</div>
-                    <h3>Professional Presence</h3>
-                    <p>Resume and contact pages showcasing professional communication and form design.</p>
-                    <div class="card-meta">
-                        <span>Professional</span>
-                        <a href="unit-5/resume.html">View Resume →</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ALL ASSIGNMENTS SECTION -->
-        <section class="links-space">
-            <h2>All Assignments</h2>
+            
             <nav class="unit-links-nav">
+                <h2>Assignments</h2>
+                
                 <div class="unit-group">
                     <h3>Unit 1</h3>
                     <ul>
@@ -230,7 +232,7 @@
                     </ul>
                 </div>
             </nav>
-        </section>
-    </main>
+        </aside>
+    </div>
 </body>
 </html>
