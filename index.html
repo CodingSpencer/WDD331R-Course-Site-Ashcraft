@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body>
-    <load src="/src/components/theme-switcher.html" />
-
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
@@ -23,76 +21,80 @@
         </div>
     </section>
 
-    <main>
-        <!-- ABOUT SECTION -->
-        <section class="about-section" id="about">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>
-                    I'm a Software Engineering student at BYU-Idaho with a focus on back-end architecture, 
-                    relational database management, and secure system design. When I'm not coding, you'll 
-                    find me contributing to open-source projects or optimizing my Linux workflow.
-                </p>
-                <div class="skills-highlight">
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">Linux</span>
+    <div class="page-layout">
+        <main>
+            <!-- ABOUT SECTION -->
+            <section class="about-section" id="about">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a Software Engineering student at BYU-Idaho with a focus on back-end architecture, 
+                        relational database management, and secure system design. When I'm not coding, you'll 
+                        find me contributing to open-source projects or optimizing my Linux workflow.
+                    </p>
+                    <div class="skills-highlight">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- FEATURED WORK SECTION -->
-        <section id="featured" class="card-group">
-            <h2>Featured Projects</h2>
-            <div class="cards">
-                <article class="card">
-                    <div class="card-tag">Unit 4</div>
-                    <h3>Grid Layouts</h3>
-                    <p>Editorial and card layouts using CSS Grid with named areas and responsive auto-fit patterns.</p>
-                    <div class="card-meta">
-                        <span>CSS Grid</span>
-                        <a href="unit-4/grid-layouts/editorial.html">View Work →</a>
-                    </div>
-                </article>
+            <!-- FEATURED WORK SECTION -->
+            <section id="featured" class="card-group">
+                <h2>Featured Projects</h2>
+                <div class="cards">
+                    <article class="card">
+                        <div class="card-tag">Unit 4</div>
+                        <h3>Grid Layouts</h3>
+                        <p>Editorial and card layouts using CSS Grid with named areas and responsive auto-fit patterns.</p>
+                        <div class="card-meta">
+                            <span>CSS Grid</span>
+                            <a href="unit-4/grid-layouts/editorial.html">View Work →</a>
+                        </div>
+                    </article>
 
-                <article class="card">
-                    <div class="card-tag">Unit 2</div>
-                    <h3>Layered Components</h3>
-                    <p>Complex UI components with proper stacking context, z-index management, and visual hierarchy.</p>
-                    <div class="card-meta">
-                        <span>UI Architecture</span>
-                        <a href="unit-2/layered-components/index.html">View Work →</a>
-                    </div>
-                </article>
+                    <article class="card">
+                        <div class="card-tag">Unit 2</div>
+                        <h3>Layered Components</h3>
+                        <p>Complex UI components with proper stacking context, z-index management, and visual hierarchy.</p>
+                        <div class="card-meta">
+                            <span>UI Architecture</span>
+                            <a href="unit-2/layered-components/index.html">View Work →</a>
+                        </div>
+                    </article>
 
-                <article class="card">
-                    <div class="card-tag">Unit 6</div>
-                    <h3>Motion & Animation</h3>
-                    <p>Smooth transitions, keyframe animations, and reduced-motion support for accessible interactions.</p>
-                    <div class="card-meta">
-                        <span>Web Animation</span>
-                        <a href="unit-6/motion/index.html">View Work →</a>
-                    </div>
-                </article>
+                    <article class="card">
+                        <div class="card-tag">Unit 6</div>
+                        <h3>Motion & Animation</h3>
+                        <p>Smooth transitions, keyframe animations, and reduced-motion support for accessible interactions.</p>
+                        <div class="card-meta">
+                            <span>Web Animation</span>
+                            <a href="unit-6/motion/index.html">View Work →</a>
+                        </div>
+                    </article>
 
-                <article class="card">
-                    <div class="card-tag">Unit 5</div>
-                    <h3>Professional Presence</h3>
-                    <p>Resume and contact pages showcasing professional communication and form design.</p>
-                    <div class="card-meta">
-                        <span>Professional</span>
-                        <a href="unit-5/resume.html">View Resume →</a>
-                    </div>
-                </article>
-            </div>
-        </section>
+                    <article class="card">
+                        <div class="card-tag">Unit 5</div>
+                        <h3>Professional Presence</h3>
+                        <p>Resume and contact pages showcasing professional communication and form design.</p>
+                        <div class="card-meta">
+                            <span>Professional</span>
+                            <a href="unit-5/resume.html">View Resume →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
 
-        <!-- ALL ASSIGNMENTS SECTION -->
-        <section class="links-space">
-            <h2>All Assignments</h2>
+        <aside class="sidebar">
+            <load src="/src/components/theme-switcher.html" />
+            
             <nav class="unit-links-nav">
+                <h2>Assignments</h2>
+                
                 <div class="unit-group">
                     <h3>Unit 1</h3>
                     <ul>
@@ -184,7 +186,7 @@
                     </ul>
                 </div>
             </nav>
-        </section>
-    </main>
+        </aside>
+    </div>
 </body>
 </html>

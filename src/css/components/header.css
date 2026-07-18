@@ -278,3 +278,45 @@ BUTTON STYLES
     border-color: var(--text-muted);
     transform: translateY(-1px);
 }
+
+/* ==========================================================================
+PAGE LAYOUT (Homepage with sidebar)
+========================================================================== */
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr clamp(250px, 30%, 350px);
+    gap: var(--space-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.sidebar {
+    background-color: var(--surface-color);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    align-self: start;
+}
+
+.sidebar h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-md);
+    color: var(--title-color);
+}
+
+@container (max-width: 768px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+}
