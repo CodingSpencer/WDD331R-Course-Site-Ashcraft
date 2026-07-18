@@ -1,7 +1,16 @@
 ## GitHub
 
-- [Live Site Page](https://wdd331r-course-site.netlify.app/)
-- [Source Repository](https://github.com/CodingSpencer/WDD331R-Course-Site-Ashcraft)
+- [Live Site Page](https://codingspencer.github.io/wdd331-practice/)
+- [Source Repository](https://github.com/CodingSpencer/wdd331-practice)
+
+## Portfolio Organization
+
+This portfolio showcases my work from WDD 331R Advanced CSS. The site is organized with:
+
+- **Token-first CSS architecture** using custom properties for colors, spacing, and typography
+- **CSS Layers** for proper cascade management (tokens, base, components, utilities)
+- **Dark mode support** using `light-dark()` and `prefers-color-scheme`
+- **Responsive layouts** with CSS Grid and `clamp()` for fluid typography
 
 ## Theme Switch
 Each page now has theme switch enabled.
