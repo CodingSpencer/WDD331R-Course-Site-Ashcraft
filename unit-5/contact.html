@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="./contact.css">
     <link rel="stylesheet" href="/dist/styles.css">
+    <link rel="stylesheet" href="./contact.css">
 </head>
-<body>
-    <load src="/src/components/nav.html" />
-    
-    <main class="contact-container">
-        <form class="contact-form" action="https://formspree.io/f/xayaoqej" method="POST">
-            <a href="/index.html" class="back-link">← Back to Portfolio</a>
-            <h2>Contact Us</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required>
-            <div class="form-group">
-                <input type="checkbox" id="phone-agree" name="phone-agree">
-                <label for="phone-agree">Check to include my phone number</label>
-            </div>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </main>
+<body class="sidebar-closed">
+    <load src="/src/components/header.html" />
+
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <load src="/src/components/sidebar.html" />
+
+        <main class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/xayaoqej" method="POST">
+                <h2>Contact Us</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <div class="form-group">
+                    <input type="checkbox" id="phone-agree" name="phone-agree">
+                    <label for="phone-agree">Check to include my phone number</label>
+                </div>
+                <div id="phone-field-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
 
     <script>
         const phoneCheckbox = document.getElementById('phone-agree');
@@ -46,5 +55,7 @@
             }
         });
     </script>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

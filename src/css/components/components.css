@@ -1,0 +1,10 @@
+@import "./nav.css" layer(components);
+@import "./cards.css" layer(components);
+@import "./board.css" layer(components);
+@import "./page.css" layer(components);
+@import "./header.css" layer(components);
+@import "./theme-toggle.css" layer(components);
+@import "./effects.css" layer(components);
+@import "./icons.css" layer(components);
+@import "./glass.css" layer(components);
+@import "./hero.css" layer(components);

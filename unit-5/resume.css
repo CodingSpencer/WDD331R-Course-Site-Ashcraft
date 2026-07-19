@@ -1,14 +1,36 @@
-/* Base Layout */
-.resume-container {
-    max-width: 800px;
-    margin: var(--space-xl) auto;
+/* ==========================================================================
+   RESUME PAGE - LAYOUT & STYLING
+   ========================================================================== */
+
+/* 1. Layout Overrides: Fix Sidebar "3/4 width" issue */
+@media (min-width: 1025px) {
+    /* Break out of global grid to allow sidebar to sit next to content */
+    body:not(.sidebar-closed) .page-layout {
+        display: flex !important;
+        grid-template-columns: none !important;
+    }
+
+    /* Force sidebar to maintain fixed width */
+    body:not(.sidebar-closed) .sidebar {
+        flex: 0 0 280px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
+
+/* 2. Main Content Container */
+main {
+    max-width: 800px !important; /* Forces resume width */
+    margin: var(--space-xl) auto !important;
     padding: 0 var(--space-md);
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
+    width: 100%;
 }
 
-/* Header + Contact Row */
+/* 3. Header + Contact Row */
 .resume-header {
     display: flex;
     flex-direction: column;
@@ -17,9 +39,7 @@
     padding-bottom: var(--space-sm);
 }
 
-.resume-header h1 {
-    margin: 0;
-}
+.resume-header h1 { margin: 0; }
 
 .contact-info-list {
     display: flex;
@@ -31,13 +51,10 @@
     gap: var(--space-md);
 }
 
-.contact-info-list li {
-    display: flex;
-    align-items: center;
-}
+.contact-info-list li { display: flex; align-items: center; }
 
-/* Section Headings + Icons */
-section h2 {
+/* 4. Section Headings + Icons */
+main section h2 {
     display: flex;
     align-items: center;
     gap: var(--space-xs);
@@ -47,136 +64,53 @@ section h2 {
     border-bottom: calc(var(--outline-width) * 0.5) solid currentColor;
 }
 
-section h2 .icon {
-    flex-shrink: 0;
-    align-self: center;
-}
+main section h2 .icon { flex-shrink: 0; }
 
-/* Spacing */
-.job-entry, .education-entry {
-    margin-bottom: var(--space-md);
-}
+/* 5. Spacing & Entry Styling */
+.job-entry, .education-entry { margin-bottom: var(--space-md); }
+.job-entry:last-of-type, .education-entry:last-of-type { margin-bottom: 0; }
+.job-meta, .institution, .date { margin: 0 0 var(--space-xs) 0; }
 
-.job-entry:last-of-type, .education-entry:last-of-type {
-    margin-bottom: 0;
-}
+main h3 { margin-top: 0; margin-bottom: calc(var(--space-xs) * 0.5); }
 
-.job-meta, .institution, .date {
-    margin: 0 0 var(--space-xs) 0;
-}
+main p, main ul, main dl { margin-top: 0; margin-bottom: var(--space-md); }
+main ul { padding-left: var(--space-md); }
+main li { margin-bottom: var(--space-xs); line-height: 1.5; }
+main li:last-child { margin-bottom: 0; }
 
-h3 {
-    margin-top: 0;
-    margin-bottom: calc(var(--space-xs) * 0.5);
-}
+.qualifications-dl dt { font-weight: bold; margin-top: var(--space-sm); }
+.qualifications-dl dt:first-of-type { margin-top: 0; }
+.qualifications-dl dd { margin-left: 0; margin-bottom: var(--space-sm); }
 
-p, ul, dl {
-    margin-top: 0;
-    margin-bottom: var(--space-md);
-}
-
-ul {
-    padding-left: var(--space-md);
-}
-
-li {
-    margin-bottom: var(--space-xs);
-    line-height: 1.5;
-}
-
-li:last-child {
-    margin-bottom: 0;
-}
-
-.qualifications-dl dt {
-    font-weight: bold;
-    margin-top: var(--space-sm);
-}
-
-.qualifications-dl dt:first-of-type {
-    margin-top: 0;
-}
-
-.qualifications-dl dd {
-    margin-left: 0;
-    margin-bottom: var(--space-sm);
-}
-
+/* 6. Print Media Cleanup */
 @media print {
     body {
         font-family: var(--font-family-body);
         font-size: var(--font-size-sm); 
-        line-height: var(--line-height-heading); 
         color: light-dark(var(--seed-text), #000000);
         background: none; 
     }
     
-    .site-nav {
-        display: none;
+    .sidebar, .menu-toggle, .sidebar-backdrop, .site-nav {
+        display: none !important;
     }
 
-    .resume-container {
-        margin: 0;
-        padding: 0;
-    }
+    main { margin: 0; padding: 0; max-width: 100% !important; }
 
-    h1 {
-        font-family: var(--font-family-heading);
-        font-size: var(--font-size-hero); 
-        margin-bottom: var(--space-xs);
-    }
-
-    h2 {
-        font-family: var(--font-family-heading);
-        font-size: var(--font-size-xl); 
-        margin-top: var(--space-md);
-        margin-bottom: var(--space-xs);
+    h1 { font-family: var(--font-family-heading); font-size: var(--font-size-hero); }
+    h2 { 
         border-bottom: var(--outline-width) solid light-dark(var(--seed-text), #000000);
-        page-break-after: avoid;
         break-after: avoid;
     }
 
-    h3 {
-        font-family: var(--font-family-heading);
-        font-size: var(--font-size-lg); 
-        margin-top: var(--space-sm);
-        margin-bottom: calc(var(--space-xs) * 0.5);
-        page-break-after: avoid;
-        break-after: avoid;
-    }
+    .job-entry, .education-entry, #skills, #additional-qualifications { break-inside: avoid; }
 
-    .job-entry, .education-entry, #skills, #additional-qualifications {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
-    p, li {
-        orphans: 3;
-        widows: 3;
-    }
-
-    li {
-        margin-bottom: var(--space-xs);
-    }
-
-    a {
-        text-decoration: none;
-        color: light-dark(var(--seed-text), #000000);
-    }
-
-    .contact-info-list a::after {
-        content: none !important;
-    }
-
-    a[href^="http"]::after,
-    a[href^="mailto"]::after {
+    a { text-decoration: none; color: light-dark(var(--seed-text), #000000); }
+    a[href^="http"]::after, a[href^="mailto"]::after {
         content: " (" attr(href) ")";
         font-size: var(--font-size-caption);
         font-style: italic;
     }
 
-    @page {
-        size: letter;
-        margin: 0.75in; 
-    }
+    @page { size: letter; margin: 0.75in; }
 }

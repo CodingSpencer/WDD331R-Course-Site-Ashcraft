@@ -1,16 +1,33 @@
-main {
-    container-type: inline-size;
-    container-name: page-layout;
+/* Layout Overload Pattern - Fix sidebar width on desktop */
+@media (min-width: 1025px) {
+    /* Break out of global grid to allow sidebar to sit next to content */
+    body:not(.sidebar-closed) .page-layout {
+        display: flex !important;
+        grid-template-columns: none !important;
+    }
+
+    /* Force sidebar to maintain fixed width */
+    body:not(.sidebar-closed) .sidebar {
+        flex: 0 0 280px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
 }
 
-.page-layout {
+main {
+    container-type: inline-size;
+    container-name: demo-layout;
+}
+
+.demo-layout {
     display: grid;
     grid-template-columns: clamp(200px, 25vw, 300px) 1fr;
     grid-template-areas: "sidebar main";
     gap: 2rem;
 }
 
-.sidebar {
+.demo-layout .sidebar {
     grid-area: sidebar;
     padding: 1rem;
 }
@@ -48,8 +65,8 @@ main {
     }
 }
 
-@container page-layout (max-width: 768px) {
-    .page-layout {
+@container demo-layout (max-width: 768px) {
+    .demo-layout {
         grid-template-columns: 1fr;
         grid-template-areas:
             "sidebar"
