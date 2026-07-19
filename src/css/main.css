@@ -15,11 +15,13 @@
 @import "./components/nav.css" layer(components);
 @import "./components/cards.css" layer(components);
 @import "./components/board.css" layer(components);
+@import "./components/page.css" layer(components);
 @import "./components/header.css" layer(components);
 @import "./components/theme-toggle.css" layer(components);
 @import "./components/effects.css" layer(components);
 @import "./components/icons.css" layer(components);
 @import "./components/glass.css" layer(components);
+@import "./components/pages/home.css" layer(components);
 
 /* UTILITIES */
 @import "./utilities/utilities.css" layer(utilities);

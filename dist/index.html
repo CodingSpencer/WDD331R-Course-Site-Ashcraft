@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spencer Ashcraft - Portfolio</title>
     <script src="./src/js/theme-preference.js" defer></script>
-  <link rel="stylesheet" crossorigin href="/assets/styles-BdXpGXxg.css">
+    
+    <!-- Kept link targeting the compiled distribution build -->
+  <link rel="stylesheet" crossorigin href="/assets/styles-Cmgz5YTb.css">
 </head>
-<body>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero__title">Spencer Ashcraft</h1>
-            <p class="hero__subtitle">Software Engineering Student | CSS Architecture Specialist</p>
-            <p class="hero__description">
-                Building robust back-end systems and crafting beautiful, accessible user interfaces.
-                Passionate about database design, cloud infrastructure, and modern CSS techniques.
-            </p>
-            <a href="#featured" class="btn btn-primary">View My Work</a>
-        </div>
-    </section>
+<body class="sidebar-closed">
+
+    <!-- Sidebar Toggle Button -->
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="hamburger-icon"></span>
+    </button>
+
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
     <div class="page-layout">
+        <!-- Sidebar Panel -->
         <aside class="sidebar" id="sidebar">
-            <button class="menu-toggle" id="menu-toggle" aria-expanded="true" aria-label="Toggle navigation menu">
-                <span class="hamburger-icon"></span>
-            </button>
-            
-            <div class="sidebar-content">
-                <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
     <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="4"/>
         <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
@@ -75,112 +69,74 @@
         </label>
     </div>
 </details>
-                
-                <nav class="unit-links-nav">
-                    <h2>Assignments</h2>
-                    
-                    <div class="unit-group">
-                        <h3>Unit 1</h3>
-                        <ul>
-                            <li>
-                                <a href="unit-1/custom-properties/index.html">
-                                    Custom Properties and Nesting
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="unit-group">
-                        <h3>Unit 2</h3>
-                        <ul>
-                            <li>
-                                <a href="unit-2/layered-components/index.html">
-                                    Layered Components
-                                </a>
-                            </li>
-                            <li>
-                                <a href="unit-2/lightning-css-demo/index.html">
-                                    Lightning CSS Demo
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="unit-group">
-                        <h3>Unit 3</h3>
-                        <ul>
-                            <li>
-                                <a href="unit-3/visual-effects/index.html">
-                                    Visual Effects
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="unit-group">
-                        <h3>Unit 4</h3>
-                        <ul>
-                            <li>
-                                <a href="unit-4/grid-layouts/editorial.html">
-                                    Editorial & Cards Layout
-                                </a>
-                            </li>
-                            <li>
-                                <a href="unit-4/advanced/container-demo.html">
-                                    Container Query Component
-                                </a>
-                            </li>
-                            <li>
-                                <a href="unit-4/advanced/sticky-demo.html">
-                                    Sticky Element Demo
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="unit-group">
-                        <h3>Unit 5</h3>
-                        <ul>
-                            <li>
-                                <a href="unit-5/resume.html">
-                                    Resume Page
-                                </a>
-                            </li>
-                            <li>
-                                <a href="unit-5/contact.html">
-                                    Contact Us Page
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="unit-group">
-                        <h3>Unit 6</h3>
-                        <ul>
-                            <li>
-                                <a href="unit-6/motion/index.html">
-                                    Motion
-                                </a>
-                            </li>
-                            <li>
-                                <a href="unit-6/css-icons/index.html">
-                                    Pure CSS Icons
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            <nav class="unit-links-nav">
+                <h2>Assignments</h2>
+                <div class="unit-group">
+                    <h3>Unit 1</h3>
+                    <ul>
+                        <li><a href="unit-1/custom-properties/index.html">Custom Properties and Nesting</a></li>
+                    </ul>
+                </div>
+                <div class="unit-group">
+                    <h3>Unit 2</h3>
+                    <ul>
+                        <li><a href="unit-2/layered-components/index.html">Layered Components</a></li>
+                        <li><a href="unit-2/lightning-css-demo/index.html">Lightning CSS Demo</a></li>
+                    </ul>
+                </div>
+                <div class="unit-group">
+                    <h3>Unit 3</h3>
+                    <ul>
+                        <li><a href="unit-3/visual-effects/index.html">Visual Effects</a></li>
+                    </ul>
+                </div>
+                <div class="unit-group">
+                    <h3>Unit 4</h3>
+                    <ul>
+                        <li><a href="unit-4/grid-layouts/editorial.html">Editorial & Cards Layout</a></li>
+                        <li><a href="unit-4/advanced/container-demo.html">Container Query Component</a></li>
+                        <li><a href="unit-4/advanced/sticky-demo.html">Sticky Element Demo</a></li>
+                    </ul>
+                </div>
+                <div class="unit-group">
+                    <h3>Unit 5</h3>
+                    <ul>
+                        <li><a href="unit-5/resume.html">Resume Page</a></li>
+                        <li><a href="unit-5/contact.html">Contact Us Page</a></li>
+                    </ul>
+                </div>
+                <div class="unit-group">
+                    <h3>Unit 6</h3>
+                    <ul>
+                        <li><a href="unit-6/motion/index.html">Motion</a></li>
+                        <li><a href="unit-6/css-icons/index.html">Pure CSS Icons</a></li>
+                    </ul>
+                </div>
+            </nav>
         </aside>
 
         <main>
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero__title">Spencer Ashcraft</h1>
+                    <p class="hero__subtitle">Software Engineering Student | CSS Architecture Specialist</p>
+                    <p class="hero__description">
+                        Building robust back-end systems and crafting beautiful, accessible user interfaces.
+                        Passionate about database design, cloud infrastructure, and modern CSS techniques.
+                    </p>
+                    <a href="#featured" class="btn btn-primary">View My Work</a>
+                </div>
+            </section>
+
             <!-- ABOUT SECTION -->
             <section class="about-section" id="about">
                 <div class="about-content">
                     <h2>About Me</h2>
                     <p>
-                        I'm a Software Engineering student at BYU-Idaho with a focus on back-end architecture, 
-                        relational database management, and secure system design. When I'm not coding, you'll 
+                        I'm a Software Engineering student at BYU-Idaho with a focus on back-end architecture,
+                        relational database management, and secure system design. When I'm not coding, you'll
                         find me contributing to open-source projects or optimizing my Linux workflow.
                     </p>
                     <div class="skills-highlight">
@@ -206,7 +162,6 @@
                             <a href="unit-4/grid-layouts/editorial.html">View Work →</a>
                         </div>
                     </article>
-
                     <article class="card">
                         <div class="card-tag">Unit 2</div>
                         <h3>Layered Components</h3>
@@ -216,7 +171,6 @@
                             <a href="unit-2/layered-components/index.html">View Work →</a>
                         </div>
                     </article>
-
                     <article class="card">
                         <div class="card-tag">Unit 6</div>
                         <h3>Motion & Animation</h3>
@@ -226,7 +180,6 @@
                             <a href="unit-6/motion/index.html">View Work →</a>
                         </div>
                     </article>
-
                     <article class="card">
                         <div class="card-tag">Unit 5</div>
                         <h3>Professional Presence</h3>
@@ -241,15 +194,6 @@
         </main>
     </div>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-        
-        menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            sidebar.classList.toggle('collapsed');
-        });
-    </script>
+    <script src="./src/js/sidebar.js" defer></script>
 </body>
 </html>
