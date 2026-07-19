@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editorial Layout</title>
-  <link rel="stylesheet" crossorigin href="/assets/unit4Editorial-BZDxuomJ.css">
-  <link rel="stylesheet" crossorigin href="/assets/styles-DR6miGJ8.css">
+  <link rel="stylesheet" crossorigin href="/assets/unit4Editorial-CB4xytp0.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-Bi3J49WA.css">
 </head>
 <body class="editorial-page">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
-            <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-        </symbol>
-    </svg>
+    <!-- Home Icon SVG Sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
+    <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    </symbol>
+</svg>
 
-    <header>
-        <a href="/index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true"></svg>
-                <symbol id="icon-home" viewBox="0 0 24 24">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                </symbol>
+<!-- Sidebar Toggle Button -->
+<button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+    <span class="hamburger-icon"></span>
+</button>
+
+<!-- Sidebar Overlay Backdrop -->
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<div class="page-layout">
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <a href="/index.html" aria-label="Home">
+            <svg class="icon-home" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <use href="#icon-home"></use>
             </svg>
         </a>
 
@@ -71,7 +80,59 @@
         </label>
     </div>
 </details>
+    </nav>
 
+    <aside class="sidebar" id="sidebar">
+        <nav class="unit-links-nav">
+            <h2>Assignments</h2>
+            <div class="unit-group">
+                <h3>Unit 1</h3>
+                <ul>
+                    <li><a href="unit-1/custom-properties/index.html">Custom Properties and Nesting</a></li>
+                </ul>
+            </div>
+            <div class="unit-group">
+                <h3>Unit 2</h3>
+                <ul>
+                    <li><a href="unit-2/layered-components/index.html">Layered Components</a></li>
+                    <li><a href="unit-2/lightning-css-demo/index.html">Lightning CSS Demo</a></li>
+                </ul>
+            </div>
+            <div class="unit-group">
+                <h3>Unit 3</h3>
+                <ul>
+                    <li><a href="unit-3/visual-effects/index.html">Visual Effects</a></li>
+                </ul>
+            </div>
+            <div class="unit-group">
+                <h3>Unit 4</h3>
+                <ul>
+                    <li><a href="unit-4/grid-layouts/editorial.html">Editorial & Cards Layout</a></li>
+                    <li><a href="unit-4/advanced/container-demo.html">Container Query Component</a></li>
+                    <li><a href="unit-4/advanced/sticky-demo.html">Sticky Element Demo</a></li>
+                </ul>
+            </div>
+            <div class="unit-group">
+                <h3>Unit 5</h3>
+                <ul>
+                    <li><a href="unit-5/resume.html">Resume Page</a></li>
+                    <li><a href="unit-5/contact.html">Contact Us Page</a></li>
+                </ul>
+            </div>
+            <div class="unit-group">
+                <h3>Unit 6</h3>
+                <ul>
+                    <li><a href="unit-6/motion/index.html">Motion</a></li>
+                    <li><a href="unit-6/css-icons/index.html">Pure CSS Icons</a></li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+</div>
+
+<script src="/src/js/sidebar.js" defer></script>
+
+    <header>
         <nav class="nav-links-row">
             <a href="./editorial.html" class="btn">Deliberate Practice</a>
             <a href="./cards.html" class="btn">Articles</a>

@@ -1,20 +1,3 @@
-/* Back Link */
-.back-link {
-    display: inline-block;
-    margin-bottom: var(--space-sm);
-    font-size: var(--font-size-sm);
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: var(--font-medium);
-    transition: color var(--transition-base), transform var(--transition-base);
-}
-
-.back-link:hover,
-.back-link:focus-visible {
-    color: var(--link-hover-color);
-    transform: translateX(-4px);
-}
-
 .page-wrapper {
     /* overflow: hidden; */
     /* Tested that it broke the sticky element */

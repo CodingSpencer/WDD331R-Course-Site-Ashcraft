@@ -1,23 +1,4 @@
 /* ========================================
-    BACK LINK
-    ======================================== */
-.back-link {
-    display: inline-block;
-    margin-bottom: var(--space-sm);
-    font-size: var(--font-size-sm);
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.back-link:hover,
-.back-link:focus-visible {
-    color: var(--link-hover-color);
-    transform: translateX(-4px);
-}
-
-/* ========================================
     TOKENS
     Define your design decisions here.
     Everything else in this file should

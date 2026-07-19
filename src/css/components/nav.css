@@ -1,6 +1,6 @@
 /* ========================================
 HOMEPAGE DASHBOARD MODULE
-======================================= */
+======================================== */
 .links-space {
     background-color: var(--surface-color);
     padding: var(--space-lg);
@@ -14,12 +14,11 @@ HOMEPAGE DASHBOARD MODULE
 
 @scope (.unit-links-nav) {
     :scope {
-        background-color: var(--surface-color);
-        padding: var(--space-lg);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-md);
-        width: clamp(200px, 80%, 400px); /* Fixed from 800% to 80% */
-        margin: var(--space-xl) auto;
+        /* Remove the width limits, margins, borders, and extra backgrounds */
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         font-family: var(--font-sans);
         line-height: var(--line-height);
     }
@@ -27,17 +26,40 @@ HOMEPAGE DASHBOARD MODULE
     & h2 {
         font-size: var(--font-size-lg);
         margin-bottom: var(--space-md);
-        text-align: center;
+        color: #1f7a4c; /* Keeps your green primary color scheme */
+        text-align: left; /* Aligns the header cleanly with the content */
+    }
+
+    /* Style individual item group headers if needed */
+    & h3 {
+        font-size: var(--font-size-sm);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-muted, #777);
+    }
+
+    /* Clean up the unordered list defaults */
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
+
+    & li {
+        margin-bottom: 0.4rem;
     }
 
     /* Target baseline links directly */
     & a {
-        color: var(--link-color);
+        color: var(--link-color, #0066cc);
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         font-size: var(--font-size-md);
         display: block;
-        text-align: center;
+        text-align: left; /* Left align text so it fills the sidebar cleanly */
+        transition: color var(--transition-base, 0.2s ease);
     }
 
     /* Visited links */
@@ -59,7 +81,7 @@ HOMEPAGE DASHBOARD MODULE
 
 /* ========================================
 GLOBAL NAVIGATION BAR (.site-nav)
-======================================= */
+======================================== */
 @scope (.site-nav) {
     :scope {
         display: flex;
