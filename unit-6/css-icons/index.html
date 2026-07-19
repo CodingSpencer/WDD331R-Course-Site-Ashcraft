@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Icons Demo</title>
-    <link rel="stylesheet" href="css-icons.css">
     <link rel="stylesheet" href="/dist/styles.css">
+    <link rel="stylesheet" href="css-icons.css">
 </head>
-<body>
-    <header>
-        <load src="/src/components/nav.html" />
-    </header>
+<body class="sidebar-closed">
+    <load src="/src/components/header.html" />
 
-    <main>
-        <a href="/index.html" class="back-link">← Back to Portfolio</a>
-        
-        <!-- The wrapper sets a color to prove currentColor works -->
-        <div class="icon-wrapper" style="color: #2563eb;">
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <load src="/src/components/sidebar.html" />
+
+        <main>
+            <a href="/index.html" class="back-link">← Back to Portfolio</a>
             
-            <!-- Icon 1: Hamburger Menu (Uses ::before and ::after) -->
-            <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle menu">
-                <span class="hamburger-icon"></span>
-            </button>
+            <!-- The wrapper sets a color to prove currentColor works -->
+            <div class="icon-wrapper" style="color: #2563eb;">
+                
+                <!-- Icon 1: Hamburger Menu (Uses ::before and ::after) -->
+                <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="hamburger-icon"></span>
+                </button>
 
-            <!-- Icon 2: Play Button (Built with borders) -->
-            <button class="play-btn" aria-pressed="false" aria-label="Toggle play">
-                <span class="play-icon"></span>
-            </button>
+                <!-- Icon 2: Play Button (Built with borders) -->
+                <button class="play-btn" aria-pressed="false" aria-label="Toggle play">
+                    <span class="play-icon"></span>
+                </button>
 
-            <!-- Icon 3: Search Magnifying Glass (Built with borders and ::after) -->
-            <div class="search-icon" aria-label="Search" role="img"></div>
+                <!-- Icon 3: Search Magnifying Glass (Built with borders and ::after) -->
+                <div class="search-icon" aria-label="Search" role="img"></div>
 
-        </div>
-    </main>
+            </div>
+        </main>
+    </div>
 
     <script>
         // Handle the aria-expanded state for the hamburger morph
@@ -51,5 +57,7 @@
             playBtn.setAttribute('aria-pressed', !isPressed);
         });
     </script>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

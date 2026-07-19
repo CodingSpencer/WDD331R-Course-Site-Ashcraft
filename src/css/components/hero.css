@@ -1,0 +1,75 @@
+/* ========================================
+HERO SECTION
+======================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: var(--space-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-display-sm);
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    line-height: var(--line-height-display);
+}
+
+.hero-content p {
+    font-weight: var(--font-semibold);
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: var(--font-size-lg);
+}
+
+/* Layout Overload Pattern - Fix sidebar width on desktop */
+@media (min-width: 1025px) {
+    /* Break out of global grid to allow sidebar to sit next to content */
+    body:not(.sidebar-closed) .page-layout {
+        display: flex !important;
+        grid-template-columns: none !important;
+    }
+
+    /* Force sidebar to maintain fixed width */
+    body:not(.sidebar-closed) .sidebar {
+        flex: 0 0 280px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
+
+/* Section Spacing */
+.about-section, .card-group {
+    margin-bottom: var(--space-xl);
+}

@@ -1,3 +1,20 @@
+/* Layout Overload Pattern - Fix sidebar width on desktop */
+@media (min-width: 1025px) {
+    /* Break out of global grid to allow sidebar to sit next to content */
+    body:not(.sidebar-closed) .page-layout {
+        display: flex !important;
+        grid-template-columns: none !important;
+    }
+
+    /* Force sidebar to maintain fixed width */
+    body:not(.sidebar-closed) .sidebar {
+        flex: 0 0 280px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
+
 .page-wrapper {
     /* overflow: hidden; */
     /* Tested that it broke the sticky element */
@@ -8,7 +25,7 @@
     /* This allows the overflow hidden to be applied but moves it to another layer so the sticky layout chains is unaffected  which allows the sticky element to work. */
 }
 
-.page-layout {
+.sticky-layout {
     display: grid;
     grid-template-columns: clamp(200px, 25vw, 300px) 1fr;
     grid-template-areas: "sidebar main";
@@ -16,7 +33,7 @@
     max-width: 100vw;
 }
 
-.sidebar {
+.sticky-layout .sidebar {
     position: sticky;
     top: 1rem;
     align-self: start;

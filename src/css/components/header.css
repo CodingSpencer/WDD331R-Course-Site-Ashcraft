@@ -1,30 +1,21 @@
-/* ========================================
-HEREO SECTION
-======================================== */
-.hero {
+/* Header Container */
+.page-header {
+    display: flex;
+    flex-direction: row-reverse; /* Flips the horizontal order of the items */
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    position: sticky; /* Keeps header at top on scroll */
+    top: 0;
+    z-index: 800;
+}
+
+/* Home Link */
+.page-header > a {
+    color: var(--text-color);
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 60vh;
-    padding: var(--space-xl);
-    text-align: center;
-}
-
-.hero__title {
-    font-size: var(--font-size-display-sm);
-    margin-bottom: 0.5rem;
-    color: var(--title-color);
-    line-height: var(--line-height-display);
-}
-
-.hero__subtitle {
-    font-weight: var(--font-semibold);
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    font-size: var(--font-size-lg);
-}
-
-/* Section Spacing */
-.about-section, .card-group {
-    margin-bottom: var(--space-xl);
 }

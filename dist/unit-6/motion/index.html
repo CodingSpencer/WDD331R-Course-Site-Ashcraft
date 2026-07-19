@@ -6,9 +6,9 @@
     <title>Activity Dashboard</title>
     <script src="reduce.js" defer></script>
   <link rel="stylesheet" crossorigin href="/assets/unit6Motion-5-xBRa6k.css">
-  <link rel="stylesheet" crossorigin href="/assets/styles-Cmgz5YTb.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-Ba6cm204.css">
 </head>
-<body>
+<body class="sidebar-closed">
     <svg xmlns="http://www.w3.org/2000/svg" style=" display: none; position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
     <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
@@ -16,13 +16,25 @@
     </symbol>
 </svg>
 
-<nav class="site-nav">
+<header class="page-header">
     <a href="/index.html" aria-label="Home">
         <svg class="icon-home" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
             <use href="#icon-home"></use>
         </svg>
     </a>
 
+    <!-- Sidebar Toggle Button -->
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="hamburger-icon"></span>
+    </button>
+</header>
+
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <aside class="sidebar" id="sidebar">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
     <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="4"/>
@@ -70,95 +82,140 @@
         </label>
     </div>
 </details>
-</nav>
 
-    <main>
-        <a href="/index.html" class="back-link">← Back to Portfolio</a>
-        
-        <div class="toast" id="my-toast">
-            <span>Changes saved successfully.</span>
-            <button class="toast-dismiss" id="close-toast" aria-label="Close notification">&times;</button>
+    <nav class="unit-links-nav">
+        <h2>Assignments</h2>
+        <div class="unit-group">
+            <h3>Unit 1</h3>
+            <ul>
+                <li><a href="/unit-1/custom-properties/index.html">Custom Properties and Nesting</a></li>
+            </ul>
         </div>
+        <div class="unit-group">
+            <h3>Unit 2</h3>
+            <ul>
+                <li><a href="/unit-2/layered-components/index.html">Layered Components</a></li>
+                <li><a href="/unit-2/lightning-css-demo/index.html">Lightning CSS Demo</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 3</h3>
+            <ul>
+                <li><a href="/unit-3/visual-effects/index.html">Visual Effects</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 4</h3>
+            <ul>
+                <li><a href="/unit-4/grid-layouts/editorial.html">Editorial & Cards Layout</a></li>
+                <li><a href="/unit-4/advanced/container-demo.html">Container Query Component</a></li>
+                <li><a href="/unit-4/advanced/sticky-demo.html">Sticky Element Demo</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 5</h3>
+            <ul>
+                <li><a href="/unit-5/resume.html">Resume Page</a></li>
+                <li><a href="/unit-5/contact.html">Contact Us Page</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 6</h3>
+            <ul>
+                <li><a href="/unit-6/motion/index.html">Motion</a></li>
+                <li><a href="/unit-6/css-icons/index.html">Pure CSS Icons</a></li>
+            </ul>
+        </div>
+    </nav>
+</aside>
 
-        <section class="dashboard-header">
-            <div>
-                <h1>Activity Dashboard</h1>
-                <p>Your work at a glance.</p>
-                <button id="motion-toggle" class="btn btn-secondary" aria-pressed="false" type="button">
-                    Reduce Motion: Off
-                </button>
+        <main>
+            <div class="toast" id="my-toast">
+                <span>Changes saved successfully.</span>
+                <button class="toast-dismiss" id="close-toast" aria-label="Close notification">&times;</button>
             </div>
-            <div class="status">
-                <span class="status-badge">Live</span>
-                <span class="status-label">All systems operational</span>
-            </div>
-        </section>
 
-        <section class="actions">
-            <button class="btn btn-primary" type="button">New Project</button>
-            <button class="btn btn-secondary" type="button">View Archive</button>
-            <button class="btn btn-ghost" type="button">Export Data</button>
-        </section>
-
-        <section class="card-grid">
-
-            <article class="card">
-                <div class="card-header">
-                    <h2>Design Tokens</h2>
-                    <span class="card-tag">Complete</span>
+            <section class="dashboard-header">
+                <div>
+                    <h1>Activity Dashboard</h1>
+                    <p>Your work at a glance.</p>
+                    <button id="motion-toggle" class="btn btn-secondary" aria-pressed="false" type="button">
+                        Reduce Motion: Off
+                    </button>
                 </div>
-                <p>Color, spacing, and type tokens organized into a token-first architecture with dark mode support.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <h2>Grid Layouts</h2>
-                    <span class="card-tag">Complete</span>
+                <div class="status">
+                    <span class="status-badge">Live</span>
+                    <span class="status-label">All systems operational</span>
                 </div>
-                <p>Editorial layout with named grid areas and a responsive auto-fit card grid that adapts without breakpoints.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+            </section>
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>Type Scale</h2>
-                    <span class="card-tag">Complete</span>
-                </div>
-                <p>Fluid typography using clamp() and a modular scale with web fonts loaded for performance.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+            <section class="actions">
+                <button class="btn btn-primary" type="button">New Project</button>
+                <button class="btn btn-secondary" type="button">View Archive</button>
+                <button class="btn btn-ghost" type="button">Export Data</button>
+            </section>
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>Motion</h2>
-                    <span class="card-tag card-tag--active">In Progress</span>
-                </div>
-                <p>Transitions, keyframe animations, and reduced-motion support applied across the portfolio.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+            <section class="card-grid">
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>SVG Icons</h2>
-                    <span class="card-tag card-tag--pending">Up Next</span>
-                </div>
-                <p>Accessible SVG sprite system using symbol and use with currentColor theming.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Design Tokens</h2>
+                        <span class="card-tag">Complete</span>
+                    </div>
+                    <p>Color, spacing, and type tokens organized into a token-first architecture with dark mode support.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>Portfolio</h2>
-                    <span class="card-tag card-tag--pending">Up Next</span>
-                </div>
-                <p>Capstone project showcasing the full toolkit built throughout this course.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Grid Layouts</h2>
+                        <span class="card-tag">Complete</span>
+                    </div>
+                    <p>Editorial layout with named grid areas and a responsive auto-fit card grid that adapts without breakpoints.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
-        </section>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Type Scale</h2>
+                        <span class="card-tag">Complete</span>
+                    </div>
+                    <p>Fluid typography using clamp() and a modular scale with web fonts loaded for performance.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
-    </main>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Motion</h2>
+                        <span class="card-tag card-tag--active">In Progress</span>
+                    </div>
+                    <p>Transitions, keyframe animations, and reduced-motion support applied across the portfolio.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
+                <article class="card">
+                    <div class="card-header">
+                        <h2>SVG Icons</h2>
+                        <span class="card-tag card-tag--pending">Up Next</span>
+                    </div>
+                    <p>Accessible SVG sprite system using symbol and use with currentColor theming.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Portfolio</h2>
+                        <span class="card-tag card-tag--pending">Up Next</span>
+                    </div>
+                    <p>Capstone project showcasing the full toolkit built throughout this course.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

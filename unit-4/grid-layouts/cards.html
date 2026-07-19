@@ -7,113 +7,97 @@
     <link rel="stylesheet" href="../../dist/styles.css">
     <link rel="stylesheet" href="cards.css">
 </head>
-<body class="articles-page">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
-            <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-        </symbol>
-    </svg>
+<body class="sidebar-closed">
+    <load src="/src/components/header.html" />
 
-    <header>
-        <a href="/index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true"></svg>
-                <symbol id="icon-home" viewBox="0 0 24 24">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                </symbol>
-            </svg>
-        </a>
-        
-        <div class="header-text">
-            <h1>Featured Articles</h1>
-            <p>Exploring modern CSS layout techniques.</p>
-        </div>
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-        <nav class="nav-links-row">
-            <a href="./editorial.html" class="btn">Deliberate Practice</a>
-            <a href="./cards.html" class="btn">Articles</a>
-        </nav>
-    </header>
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <load src="/src/components/sidebar.html" />
 
-    <main>
-        <a href="/index.html" class="back-link">← Back to Portfolio</a>
-        
-        <div class="card-grid">
+        <main>
+            <a href="/index.html" class="back-link">← Back to Portfolio</a>
 
-            <article class="card">
-                <img src="https://picsum.photos/id/101/400/250" alt="Sample tech image">
-                <div>
-                    <h2>Named Grid Areas</h2>
-                    <p>
-                        Define your layout with readable area names instead of
-                        column and row numbers.
-                    </p>
-                    <a href="#">Read more</a>
-                </div>
-            </article>
+            <div class="card-grid">
 
-            <article class="card">
-                <img src="https://picsum.photos/id/102/400/250" alt="Sample code image">
-                <div>
-                    <h2>Responsive Tracks</h2>
-                    <p>
-                        Let the browser decide how many columns fit using
-                        auto-fit and minmax.
-                    </p>
-                    <a href="#">Read more</a>
-                </div>
-            </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/101/400/250" alt="Sample tech image">
+                    <div>
+                        <h2>Named Grid Areas</h2>
+                        <p>
+                            Define your layout with readable area names instead of
+                            column and row numbers.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="https://picsum.photos/id/103/400/250" alt="Sample design image">
-                <div>
-                    <h2>Flexbox Patterns</h2>
-                    <p>
-                        Use content-driven sizing when items should determine
-                        their own width.
-                    </p>
-                    <a href="#">Read more</a>
-                </div>
-            </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/102/400/250" alt="Sample code image">
+                    <div>
+                        <h2>Responsive Tracks</h2>
+                        <p>
+                            Let the browser decide how many columns fit using
+                            auto-fit and minmax.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="https://picsum.photos/id/104/400/250" alt="Sample layout image">
-                <div>
-                    <h2>Logical Properties</h2>
-                    <p>
-                        Write layouts that work naturally in both
-                        left-to-right and right-to-left reading modes.
-                    </p>
-                    <a href="#">Read more</a>
-                </div>
-            </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/103/400/250" alt="Sample design image">
+                    <div>
+                        <h2>Flexbox Patterns</h2>
+                        <p>
+                            Use content-driven sizing when items should determine
+                            their own width.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="https://picsum.photos/id/107/400/250" alt="Sample intrinsic image">
-                <div>
-                    <h2>Intrinsic Sizing</h2>
-                    <p>
-                        Use min-content, max-content, and fit-content()
-                        to let content drive its own dimensions.
-                    </p>
-                    <a href="#">Read more</a>
-                </div>
-            </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/104/400/250" alt="Sample layout image">
+                    <div>
+                        <h2>Logical Properties</h2>
+                        <p>
+                            Write layouts that work naturally in both
+                            left-to-right and right-to-left reading modes.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="https://picsum.photos/id/106/400/250" alt="Sample aspect image">
-                <div>
-                    <h2>Aspect Ratio</h2>
-                    <p>
-                        Control how images and media fill their containers
-                        with aspect-ratio and object-fit.
-                    </p>
-                    <a href="#">Read more</a>
-                </div>
-            </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/107/400/250" alt="Sample intrinsic image">
+                    <div>
+                        <h2>Intrinsic Sizing</h2>
+                        <p>
+                            Use min-content, max-content, and fit-content()
+                            to let content drive its own dimensions.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
-        </div>
-    </main>
+                <article class="card">
+                    <img src="https://picsum.photos/id/106/400/250" alt="Sample aspect image">
+                    <div>
+                        <h2>Aspect Ratio</h2>
+                        <p>
+                            Control how images and media fill their containers
+                            with aspect-ratio and object-fit.
+                        </p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
 
+            </div>
+        </main>
+    </div>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

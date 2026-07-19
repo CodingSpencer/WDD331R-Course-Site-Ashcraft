@@ -1,6 +1,6 @@
 ## GitHub
 
-- [Live Site Page](https://codingspencer.github.io/wdd331-practice/)
+- [Live Site Page](https://wdd331r-course-site.netlify.app/)
 - [Source Repository](https://github.com/CodingSpencer/wdd331-practice)
 
 ## Portfolio Organization

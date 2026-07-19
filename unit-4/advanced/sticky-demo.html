@@ -7,84 +7,87 @@
     <link rel="stylesheet" href="../../dist/styles.css">
     <link rel="stylesheet" href="sticky-demo.css">
 </head>
-<body>
-    <load src="/src/components/nav.html" />
+<body class="sidebar-closed">
+    <load src="/src/components/header.html" />
 
-    <header class="page-header">
-        <h1>Sticky Element Demo</h1>
-        <p>This page demonstrates the use of a stickyelement.</p>
-    </header>
-    
-    <div class="page-wrapper">
-        <div class="page-clip"></div>
-        <div class="page-layout">
-            <aside class="sidebar">
-                <h3>Table of Contents</h3>
-                <nav class="toc">
-                    <a href="#">Introduction</a>
-                    <a href="#">Getting Started</a>
-                    <a href="#">Advanced CSS</a>
-                    <a href="#">Resources</a>
-                </nav>
-            </aside>
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-            <main class="content">
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <load src="/src/components/sidebar.html" />
+
+        <main>
+            <header class="page-header">
                 <a href="/index.html" class="back-link">← Back to Portfolio</a>
-                
-                <section id="section1">
-                    <h2>Introduction</h2>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                </section>
-                <section id="section2">
-                    <h2>Getting Started</h2>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                </section>
-                <section id="section3">
-                    <h2>Advanced CSS</h2>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                </section>
-                <section id="section4">
-                    <h2>Resources</h2>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                    <p>This is a sticky element demo.</p>
-                </section>
-            </main>
-        </div>
+                <h1>Sticky Element Demo</h1>
+                <p>This page demonstrates the use of a sticky element.</p>
+            </header>
+            
+            <div class="sticky-wrapper">
+                <div class="page-clip"></div>
+                <div class="sticky-layout">
+                    <main class="content">
+                        <a href="/index.html" class="back-link">← Back to Portfolio</a>
+                        
+                        <section id="section1">
+                            <h2>Introduction</h2>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                        </section>
+                        <section id="section2">
+                            <h2>Getting Started</h2>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                        </section>
+                        <section id="section3">
+                            <h2>Advanced CSS</h2>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                        </section>
+                        <section id="section4">
+                            <h2>Resources</h2>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                            <p>This is a sticky element demo.</p>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </main>
     </div>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="../../dist/styles.css">
     <link rel="stylesheet" href="container-demo.css">
 </head>
-<body>
-    <load src="/src/components/nav.html" />
+<body class="sidebar-closed">
+    <load src="/src/components/header.html" />
 
-    <header class="page-header">
-        <h1>Container Demo</h1>
-        <p>This page demonstrates the use of the container element.</p>
-    </header>
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-    <main>
-        <a href="/index.html" class="back-link">← Back to Portfolio</a>
-        
-        <div class="page-layout">
-            <div class="sidebar">
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <load src="/src/components/sidebar.html" />
+
+        <main>
+            <header class="page-header">
+                <a href="/index.html" class="back-link">← Back to Portfolio</a>
+                <h1>Container Demo</h1>
+                <p>This page demonstrates the use of the container element.</p>
+            </header>
+
+            <div class="demo-layout">
                 <div class="card-wrapper">
                     <div class="article-card">
                         <article class="card">
@@ -29,17 +34,19 @@
                         </article>
                     </div>
                 </div>
-            </div>
-            <div class="main-content">
-                <div class="article-card">
-                    <article class="card">
-                        <h2>Container Query Component</h2>
-                        <img src="https://picsum.photos/id/101/400/250" alt="Sample tech image">
-                        <p>This card is to be used as a example of a Container Query Component.</p>
-                    </article>
+                <div class="main-content">
+                    <div class="article-card">
+                        <article class="card">
+                            <h2>Container Query Component</h2>
+                            <img src="https://picsum.photos/id/101/400/250" alt="Sample tech image">
+                            <p>This card is to be used as a example of a Container Query Component.</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-  <link rel="stylesheet" crossorigin href="/assets/unit5Contact-Bi1y29nr.css">
-  <link rel="stylesheet" crossorigin href="/assets/styles-Cmgz5YTb.css">
+  <link rel="stylesheet" crossorigin href="/assets/unit5Contact-BrScDzpY.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-Ba6cm204.css">
 </head>
-<body>
+<body class="sidebar-closed">
     <svg xmlns="http://www.w3.org/2000/svg" style=" display: none; position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
     <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
@@ -15,13 +15,25 @@
     </symbol>
 </svg>
 
-<nav class="site-nav">
+<header class="page-header">
     <a href="/index.html" aria-label="Home">
         <svg class="icon-home" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
             <use href="#icon-home"></use>
         </svg>
     </a>
 
+    <!-- Sidebar Toggle Button -->
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="hamburger-icon"></span>
+    </button>
+</header>
+
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <aside class="sidebar" id="sidebar">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; position: absolute !important;" aria-hidden="true">
     <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="4"/>
@@ -69,27 +81,74 @@
         </label>
     </div>
 </details>
-</nav>
-    
-    <main class="contact-container">
-        <form class="contact-form" action="https://formspree.io/f/xayaoqej" method="POST">
-            <a href="/index.html" class="back-link">← Back to Portfolio</a>
-            <h2>Contact Us</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required>
-            <div class="form-group">
-                <input type="checkbox" id="phone-agree" name="phone-agree">
-                <label for="phone-agree">Check to include my phone number</label>
-            </div>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </main>
+
+    <nav class="unit-links-nav">
+        <h2>Assignments</h2>
+        <div class="unit-group">
+            <h3>Unit 1</h3>
+            <ul>
+                <li><a href="/unit-1/custom-properties/index.html">Custom Properties and Nesting</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 2</h3>
+            <ul>
+                <li><a href="/unit-2/layered-components/index.html">Layered Components</a></li>
+                <li><a href="/unit-2/lightning-css-demo/index.html">Lightning CSS Demo</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 3</h3>
+            <ul>
+                <li><a href="/unit-3/visual-effects/index.html">Visual Effects</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 4</h3>
+            <ul>
+                <li><a href="/unit-4/grid-layouts/editorial.html">Editorial & Cards Layout</a></li>
+                <li><a href="/unit-4/advanced/container-demo.html">Container Query Component</a></li>
+                <li><a href="/unit-4/advanced/sticky-demo.html">Sticky Element Demo</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 5</h3>
+            <ul>
+                <li><a href="/unit-5/resume.html">Resume Page</a></li>
+                <li><a href="/unit-5/contact.html">Contact Us Page</a></li>
+            </ul>
+        </div>
+        <div class="unit-group">
+            <h3>Unit 6</h3>
+            <ul>
+                <li><a href="/unit-6/motion/index.html">Motion</a></li>
+                <li><a href="/unit-6/css-icons/index.html">Pure CSS Icons</a></li>
+            </ul>
+        </div>
+    </nav>
+</aside>
+
+        <main class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/xayaoqej" method="POST">
+                <h2>Contact Us</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <div class="form-group">
+                    <input type="checkbox" id="phone-agree" name="phone-agree">
+                    <label for="phone-agree">Check to include my phone number</label>
+                </div>
+                <div id="phone-field-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
 
     <script>
         const phoneCheckbox = document.getElementById('phone-agree');
@@ -107,5 +166,7 @@
             }
         });
     </script>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>

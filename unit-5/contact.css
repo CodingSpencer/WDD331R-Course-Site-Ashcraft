@@ -1,3 +1,20 @@
+/* Layout Overload Pattern - Fix sidebar width on desktop */
+@media (min-width: 1025px) {
+    /* Break out of global grid to allow sidebar to sit next to content */
+    body:not(.sidebar-closed) .page-layout {
+        display: flex !important;
+        grid-template-columns: none !important;
+    }
+
+    /* Force sidebar to maintain fixed width */
+    body:not(.sidebar-closed) .sidebar {
+        flex: 0 0 280px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
+
 .contact-container {
     display: flex;
     justify-content: center;

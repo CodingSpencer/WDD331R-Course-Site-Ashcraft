@@ -5,20 +5,30 @@ PORTFOLIO LAYOUT & NAVIGATION SYSTEM
 /* Grid Frame Setup */
 .page-layout {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 280px 1fr;
     min-height: 100vh;
     transition: grid-template-columns 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Sidebar Closed Modifier */
+/* Flip grid order on non-home pages */
+body.sidebar-right .page-layout {
+    grid-template-columns: 1fr 280px;
+}
+
+/* Close sidebar on left - remove from grid entirely */
 body.sidebar-closed .page-layout {
-    grid-template-columns: 0px 1fr;
+    grid-template-columns: 1fr;
+}
+
+/* Close sidebar on right - remove from grid entirely */
+body.sidebar-right.sidebar-closed .page-layout {
+    grid-template-columns: 1fr;
 }
 
 /* Base Sidebar Panel Structure */
 .sidebar {
     background-color: var(--surface-color, #f5f5f5);
-    padding: 2rem 1.5rem;
+    padding: 1rem;
     border-right: 1px solid var(--border-color, #e5e5e5);
     border-radius: 0;
     display: flex;
@@ -30,12 +40,17 @@ body.sidebar-closed .page-layout {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-/* 
-   Creates clearance area at the top for the toggle button.
-   Reduced slightly from 4.5rem to 3.5rem to pull the theme switcher up.
-*/
+
+/* Desktop Right-Side Border Override */
+body.sidebar-right .sidebar {
+    border-right: none;
+    border-left: 1px solid var(--border-color, #e5e5e5);
+}
+
 .sidebar::before {
     content: "";
     display: block;
@@ -44,22 +59,8 @@ body.sidebar-closed .page-layout {
     flex-shrink: 0;
 }
 
-/* 
-   Cleaned up duplicate rule. Sets a tighter, deliberate gap 
-   between the theme switcher component and the assignments menu.
-*/
 .sidebar .unit-links-nav {
     margin-top: 1.5rem !important; 
-}
-
-/* Safe hidden desktop container transitions */
-body.sidebar-closed .sidebar {
-    padding: 2rem 0;
-    opacity: 0;
-    visibility: hidden;
-    border: none;
-    pointer-events: none;
-    overflow: hidden;
 }
 
 .sidebar h2 {
@@ -122,7 +123,6 @@ main {
 .hamburger-icon::before { top: -8px; }
 .hamburger-icon::after { top: 8px; }
 
-/* Transform standard mobile menu icon straight to an X button when active */
 .menu-toggle[aria-expanded="true"] .hamburger-icon::before {
     transform: rotate(45deg);
     top: 0;
@@ -137,9 +137,15 @@ main {
     background-color: transparent;
 }
 
-/* Standard Hidden Tablet/Mobile Backdrop Layer */
 .sidebar-backdrop {
     display: none;
+}
+
+/* Desktop: Hide sidebar when closed */
+@media (min-width: 1025px) {
+    body.sidebar-closed .sidebar#sidebar {
+        display: none !important;
+    }
 }
 
 /* ==========================================================================
@@ -188,5 +194,22 @@ MOBILE TRANSITION BREAKPOINTS
     body.sidebar-closed .sidebar-backdrop {
         opacity: 0;
         pointer-events: none;
+    }
+
+    /* Right-side overrides for mobile */
+    body.sidebar-right .sidebar { 
+        left: auto; 
+        right: 0; 
+        border-right: none; 
+        border-left: 1px solid var(--border-color, #e5e5e5); 
+    }
+    
+    body.sidebar-right.sidebar-closed .sidebar { 
+        transform: translateX(100%); 
+    }
+
+    body.sidebar-right .sidebar-backdrop {
+        left: auto;
+        right: 0;
     }
 }

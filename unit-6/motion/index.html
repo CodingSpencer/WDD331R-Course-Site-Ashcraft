@@ -8,96 +8,103 @@
     <link rel="stylesheet" href="motion.css">
     <script src="reduce.js" defer></script>
 </head>
-<body>
-    <load src="/src/components/nav.html" />
+<body class="sidebar-closed">
+    <load src="/src/components/header.html" />
 
-    <main>
-        <a href="/index.html" class="back-link">← Back to Portfolio</a>
-        
-        <div class="toast" id="my-toast">
-            <span>Changes saved successfully.</span>
-            <button class="toast-dismiss" id="close-toast" aria-label="Close notification">&times;</button>
-        </div>
+    <!-- Sidebar Overlay Backdrop -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-        <section class="dashboard-header">
-            <div>
-                <h1>Activity Dashboard</h1>
-                <p>Your work at a glance.</p>
-                <button id="motion-toggle" class="btn btn-secondary" aria-pressed="false" type="button">
-                    Reduce Motion: Off
-                </button>
+    <div class="page-layout">
+        <!-- Sidebar Panel -->
+        <load src="/src/components/sidebar.html" />
+
+        <main>
+            <div class="toast" id="my-toast">
+                <span>Changes saved successfully.</span>
+                <button class="toast-dismiss" id="close-toast" aria-label="Close notification">&times;</button>
             </div>
-            <div class="status">
-                <span class="status-badge">Live</span>
-                <span class="status-label">All systems operational</span>
-            </div>
-        </section>
 
-        <section class="actions">
-            <button class="btn btn-primary" type="button">New Project</button>
-            <button class="btn btn-secondary" type="button">View Archive</button>
-            <button class="btn btn-ghost" type="button">Export Data</button>
-        </section>
-
-        <section class="card-grid">
-
-            <article class="card">
-                <div class="card-header">
-                    <h2>Design Tokens</h2>
-                    <span class="card-tag">Complete</span>
+            <section class="dashboard-header">
+                <div>
+                    <h1>Activity Dashboard</h1>
+                    <p>Your work at a glance.</p>
+                    <button id="motion-toggle" class="btn btn-secondary" aria-pressed="false" type="button">
+                        Reduce Motion: Off
+                    </button>
                 </div>
-                <p>Color, spacing, and type tokens organized into a token-first architecture with dark mode support.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <h2>Grid Layouts</h2>
-                    <span class="card-tag">Complete</span>
+                <div class="status">
+                    <span class="status-badge">Live</span>
+                    <span class="status-label">All systems operational</span>
                 </div>
-                <p>Editorial layout with named grid areas and a responsive auto-fit card grid that adapts without breakpoints.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+            </section>
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>Type Scale</h2>
-                    <span class="card-tag">Complete</span>
-                </div>
-                <p>Fluid typography using clamp() and a modular scale with web fonts loaded for performance.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+            <section class="actions">
+                <button class="btn btn-primary" type="button">New Project</button>
+                <button class="btn btn-secondary" type="button">View Archive</button>
+                <button class="btn btn-ghost" type="button">Export Data</button>
+            </section>
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>Motion</h2>
-                    <span class="card-tag card-tag--active">In Progress</span>
-                </div>
-                <p>Transitions, keyframe animations, and reduced-motion support applied across the portfolio.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+            <section class="card-grid">
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>SVG Icons</h2>
-                    <span class="card-tag card-tag--pending">Up Next</span>
-                </div>
-                <p>Accessible SVG sprite system using symbol and use with currentColor theming.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Design Tokens</h2>
+                        <span class="card-tag">Complete</span>
+                    </div>
+                    <p>Color, spacing, and type tokens organized into a token-first architecture with dark mode support.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
-            <article class="card">
-                <div class="card-header">
-                    <h2>Portfolio</h2>
-                    <span class="card-tag card-tag--pending">Up Next</span>
-                </div>
-                <p>Capstone project showcasing the full toolkit built throughout this course.</p>
-                <a href="#" class="card-link">View work &rarr;</a>
-            </article>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Grid Layouts</h2>
+                        <span class="card-tag">Complete</span>
+                    </div>
+                    <p>Editorial layout with named grid areas and a responsive auto-fit card grid that adapts without breakpoints.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
-        </section>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Type Scale</h2>
+                        <span class="card-tag">Complete</span>
+                    </div>
+                    <p>Fluid typography using clamp() and a modular scale with web fonts loaded for performance.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
-    </main>
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Motion</h2>
+                        <span class="card-tag card-tag--active">In Progress</span>
+                    </div>
+                    <p>Transitions, keyframe animations, and reduced-motion support applied across the portfolio.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
 
+                <article class="card">
+                    <div class="card-header">
+                        <h2>SVG Icons</h2>
+                        <span class="card-tag card-tag--pending">Up Next</span>
+                    </div>
+                    <p>Accessible SVG sprite system using symbol and use with currentColor theming.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <h2>Portfolio</h2>
+                        <span class="card-tag card-tag--pending">Up Next</span>
+                    </div>
+                    <p>Capstone project showcasing the full toolkit built throughout this course.</p>
+                    <a href="#" class="card-link">View work &rarr;</a>
+                </article>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/src/js/sidebar.js" defer></script>
 </body>
 </html>
